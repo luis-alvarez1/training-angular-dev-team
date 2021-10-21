@@ -7,9 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   nombre = "Giancarlo";
+  textoPlaceHolder = "Escriba esto aqui";
+  desabilitado  = true;
 
   constructor() {
-    setInterval(() => this.nombre = 'Pedro', 3000)
+    setInterval(() => this.desabilitado = false, 3000)
   }
 
   //Crear funcion para sumar valor
