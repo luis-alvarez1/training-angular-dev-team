@@ -11,4 +11,9 @@ export class AppComponent {
   constructor() {
     setInterval(() => this.nombre = 'Pedro', 3000)
   }
+
+  //Crear funcion para sumar valor
+  getSuma(numero1: number, numero2: number) {
+    return numero1 + numero2;
+  }
 }
