@@ -6,9 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-texto = "Esto es un video sobre event binding"
+texto = "";
 
-cambiarTexto (): void {
-  this.texto = "En el proximo video vamos a ver Two way data-binding";
-}
+
 }
