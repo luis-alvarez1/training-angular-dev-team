@@ -9,6 +9,14 @@ export class AppComponent {
   listEstudiante: any[] = [
     {nombre: 'Said Salcedo', estado: 'Promocionado'},
     {nombre: 'Katherin Perez', estado: 'Regular'},
-    {nombre: 'Giancarlo Cabrera', estado: 'Regular'}
+    {nombre: 'Giancarlo Cabrera', estado: 'Regular'},
+    {nombre: 'Luis Alvarez', estado: 'Promocionado'},
+    {nombre: 'Harold Verjan', estado: 'Libre'}
   ]
+
+  mostrar = true;
+
+  toogle(): void {
+    this.mostrar = !this.mostrar;
+  }
 }
