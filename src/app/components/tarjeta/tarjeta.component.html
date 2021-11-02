@@ -1,0 +1,27 @@
+<mat-card style="max-width: 450px; padding: 40px 20px ; margin: 50px 150px; " [ngStyle]="{'background-color': color}">
+    <div style="display: flex; justify-content: space-between;">
+     
+        <mat-label>
+            {{titulo}}
+        </mat-label>
+      <mat-icon style="margin-right: 50px; font-size: 35px;">
+        legend_toggle
+      </mat-icon>
+    
+    </div >
+
+    <mat-card-content style="margin: 15px 0 25px;">
+     
+        <mat-label style="font-size: 28px;">
+          {{formatCurrency(numero)}}
+        </mat-label>
+    </mat-card-content>
+    <div>
+        <mat-label style="font-size: 11px;">
+        
+           {{texto}}
+
+        </mat-label>
+        
+    </div>
+</mat-card>
