@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,17 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  listEstudiante: any[] = [
-    {nombre: 'Said Salcedo', estado: 'Promocionado'},
-    {nombre: 'Katherin Perez', estado: 'Regular'},
-    {nombre: 'Giancarlo Cabrera', estado: 'Regular'},
-    {nombre: 'Luis Alvarez', estado: 'Promocionado'},
-    {nombre: 'Harold Verjan', estado: 'Libre'}
-  ]
 
-  mostrar = true;
-
-  toogle(): void {
-    this.mostrar = !this.mostrar;
+  resultado(data:any) {
+    console.log(data);
   }
+  
+  title = 'EjmploComponente';
+
+  
+
+  
 }

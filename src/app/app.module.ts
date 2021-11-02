@@ -1,28 +1,29 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { FooterComponent } from './footer/footer.component';
-import { TablaComponent } from './dashboard/tabla/tabla.component';
-import { ListaComponent } from './dashboard/lista/lista.component';
+import { Prueba1Component } from './prueba1/prueba1.component';
+
+import {MatInputModule} from '@angular/material/input';
+import {MatCardModule} from '@angular/material/card';
+import {ReactiveFormsModule} from '@angular/forms';
+import {MatButtonModule} from '@angular/material/button';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 @NgModule({
-  declarations: [
-    DashboardComponent,
+  declarations: [   
     AppComponent,
-    NavbarComponent,
-    FooterComponent,
-    TablaComponent,
-    ListaComponent
+    Prueba1Component
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    FormsModule
+    ReactiveFormsModule,
+    MatInputModule,
+    MatCardModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
