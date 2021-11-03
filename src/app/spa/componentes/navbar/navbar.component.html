@@ -1,0 +1,13 @@
+<mat-toolbar style="background-color: dimgrey;">
+    <a class="example-icon" aria-label="Example icon-button with menu icon">
+      <img src="assets/images/A-64.png" width="30" height="30" alt="">
+    </a>
+    <span>My App</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button style="background-color: dimgrey;  " class="example-icon" aria-label="Example icon-button with heart icon" routerLinkActive='active'>
+      <mat-icon class="nav-link" [routerLink]= "['home']">home</mat-icon>
+    </button>
+    <button mat-icon-button style="background-color: dimgrey;" class="example-icon" aria-label="Example icon-button with share icon" routerLinkActive='active'>
+      <mat-icon class="nav-link" [routerLink]= "['heroes']">people_alt</mat-icon>
+    </button>
+  </mat-toolbar>
