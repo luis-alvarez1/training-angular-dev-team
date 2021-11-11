@@ -1,0 +1,34 @@
+<mat-card  style="max-width: 800px; padding: 25px 20px; margin: 50px 0px; background-color: brown;"> 
+    <mat-form-field class="example-form-field" appearance="fill" style="background-color: blue; padding: 20px;">
+        <mat-label>Nombre</mat-label>
+        <input matInput type="text" for="nombre">
+        <button *ngIf="nombre" matSuffix mat-icon-button aria-label="Clear" (click)="nombre=''">
+        <mat-icon>close</mat-icon>
+        </button>
+    </mat-form-field>
+
+    <mat-form-field class="example-form-field" appearance="fill" style="background-color: blue; padding: 20px;">
+        <mat-label>Edad</mat-label>
+        <input matInput type="text" for="edad">
+        <button *ngIf="edad" matSuffix mat-icon-button aria-label="Clear" (click)="edad">
+        <mat-icon>close</mat-icon>
+        </button>
+    </mat-form-field>
+
+    <mat-form-field class="example-form-field" appearance="fill" style="background-color:blue ; padding: 20px ;">
+        <mat-label>Direccion</mat-label>
+        <input matInput type="text" for="direccion">
+        <button *ngIf="direccion" matSuffix mat-icon-button aria-label="Clear" (click)="direccion=''">
+        <mat-icon>close</mat-icon>
+        </button>
+    </mat-form-field>
+
+    <mat-form-field class="example-form-field" appearance="fill" style=" background-color: blue; padding: 20px;">
+        <mat-label>Peso</mat-label>
+        <input matInput type="text" for="peso">
+        <button *ngIf="peso" matSuffix mat-icon-button aria-label="Clear" (click)="peso">
+        <mat-icon>close</mat-icon>
+        </button>
+      </mat-form-field>
+
+</mat-card> 
