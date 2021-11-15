@@ -24,6 +24,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatIconModule} from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { HeroesComponent } from './spa/componentes/heroes/heroes.component';
+import { PersonaArrayComponent } from './persona-array/persona-array.component';
 
 
 
@@ -35,7 +36,8 @@ import { HeroesComponent } from './spa/componentes/heroes/heroes.component';
     SpaComponent,
     NavbarComponent,
     HomeComponent,
-    HeroesComponent
+    HeroesComponent,
+    PersonaArrayComponent
   ],
   imports: [
     BrowserModule,
@@ -49,6 +51,18 @@ import { HeroesComponent } from './spa/componentes/heroes/heroes.component';
     MatToolbarModule,
     APP_ROUTING
 
+  ],
+  exports: [
+    BrowserModule,
+    ReactiveFormsModule,
+    MatInputModule,
+    MatCardModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    BrowserAnimationsModule,
+    MatIconModule,
+    MatToolbarModule,
+    
   ],
   providers: [HeroesService],
   bootstrap: [AppComponent]
