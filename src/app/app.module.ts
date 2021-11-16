@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
 
-//COMPONENTES
 import { AppComponent } from './app.component';
 import { Prueba1Component } from './prueba1/prueba1.component';
 import { HomeComponent } from './spa/componentes/home/home.component';
@@ -15,7 +14,6 @@ import { APP_ROUTING } from './app.routes';
 //SERVICIOS
 import { HeroesService } from './servicios/heroes.service'
 
-
 import {MatInputModule} from '@angular/material/input';
 import {MatCardModule} from '@angular/material/card';
 import {ReactiveFormsModule} from '@angular/forms';
@@ -25,9 +23,6 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { HeroesComponent } from './spa/componentes/heroes/heroes.component';
 import { PersonaArrayComponent } from './persona-array/persona-array.component';
-
-
-
 
 @NgModule({
   declarations: [   

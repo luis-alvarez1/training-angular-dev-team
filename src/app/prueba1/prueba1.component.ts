@@ -32,7 +32,6 @@ export class Prueba1Component implements OnInit {
   elevarNumero (){
     
   this.numeroCuadrado = this.numeroForm.controls.numero.value*this.numeroForm.controls.numero.value
-    console.log(this.numeroCuadrado)
   }
   
   onCuadrado(numero:number){
