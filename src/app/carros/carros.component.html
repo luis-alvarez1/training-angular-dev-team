@@ -1,0 +1,29 @@
+<mat-card class="body" style="background-color: bisque;">
+    <mat-card-title style="align-content: center;">REGISTRAR AUTOS</mat-card-title>
+    <mat-card-actions>
+        <form class="example-form" [formGroup]="carrosForm" (ngSubmit)="guardar()">
+
+            <mat-card-subtitle class="titulos">Marca</mat-card-subtitle>
+            <mat-form-field class="example-full-width" appearance="fill">
+                <input id="marca" formControlName="marca" placeholder="Ej: Chevrolet" type="text" matInput>
+            </mat-form-field>
+
+            <mat-card-subtitle class="titulos">Modelo</mat-card-subtitle>
+            <mat-form-field class="example-full-width" appearance="fill">
+                <input id="modelo" formControlName="modelo" placeholder="Ej: Tracker" type="text" matInput>
+            </mat-form-field>
+
+            <mat-card-subtitle class="titulos">Capacidad Motor</mat-card-subtitle>
+            <mat-form-field class="example-full-width" appearance="fill">
+                <input  id="capacidadMotor" formControlName="capacidadMotor" placeholder="Ej: 1600" type="number" matInput>
+            </mat-form-field>
+
+            <mat-card-subtitle class="titulos">Color</mat-card-subtitle>
+            <mat-form-field class="example-full-width" appearance="fill">
+                <input matInput id="color" formControlName="color" placeholder="Ej: Rojo" type="text" matInput>
+            </mat-form-field>
+
+        </form>
+        <button mat-button style="margin: 15px 0px 0px 40px;" type="submit">AGREGAR</button>
+    </mat-card-actions>
+</mat-card>

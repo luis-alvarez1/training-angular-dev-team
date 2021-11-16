@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Personas } from './models/Personas';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

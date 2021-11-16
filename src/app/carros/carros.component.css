@@ -1,0 +1,20 @@
+.body{
+    max-width: 160px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+}
+  
+.example-full-width {
+    width: 50%;
+}
+
+.titulos {
+    padding: 10px;
+    margin: 0px;
+}
