@@ -1,8 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 
-
-
 export class AppModule { }
 @Component({
   selector: 'app-pantalla',
@@ -11,9 +9,7 @@ export class AppModule { }
 })
 export class PantallaComponent implements OnInit {
   
-
   public pacientes:  Array <any> = []
-
   public showInfo: Boolean = false;
 
   formulario = new FormGroup({
@@ -21,7 +17,6 @@ export class PantallaComponent implements OnInit {
     edad: new FormControl(undefined),
     direccion: new FormControl(''),
     peso: new FormControl(undefined)
-
   })
 
   promedioEdad(){
@@ -30,8 +25,6 @@ export class PantallaComponent implements OnInit {
       sumatoria += p.edad
       
     })
-
-
     return sumatoria/this.pacientes.length;
   }
 
@@ -41,7 +34,6 @@ export class PantallaComponent implements OnInit {
       sumar += s.peso
       
     });
-
     return sumar/this.pacientes.length;
   }
 
@@ -53,7 +45,6 @@ export class PantallaComponent implements OnInit {
         pesoM = p.peso
       }
     });
-
     return pesoM;
   }
 
@@ -64,27 +55,14 @@ export class PantallaComponent implements OnInit {
         pesoMenor = p.peso;
       }
     });
-
     return pesoMenor;
   }
 
-  constructor() {
+  constructor() {}
 
-  }
-
-  ngOnInit(): void {
-    
-    
-  }
+  ngOnInit(): void {}
   onSubmit() {
     this.pacientes.push(this.formulario.value)
-    console.log(this.pacientes)
-
-    if(this.pacientes.length > 1){
-      this.showInfo = true;
-    }
-
-    
+     
   }
-  
 }
