@@ -1,4 +1,4 @@
-<mat-card class="body" style="background-color: bisque;">
+<mat-card class="body" style="background-color: rgba(161, 64, 226, 0.301);">
     <mat-card-title style="align-content: center;">REGISTRAR AUTOS</mat-card-title>
     <mat-card-actions>
         <form class="example-form" [formGroup]="carrosForm" (ngSubmit)="guardar()">
@@ -8,9 +8,14 @@
                 <input id="marca" formControlName="marca" placeholder="Ej: Chevrolet" type="text" matInput>
             </mat-form-field>
 
+            <mat-card-subtitle class="titulos">Nombre</mat-card-subtitle>
+            <mat-form-field class="example-full-width" appearance="fill">
+                <input id="nombre" formControlName="nombre" placeholder="Ej: Tracker" type="text" matInput>
+            </mat-form-field>
+
             <mat-card-subtitle class="titulos">Modelo</mat-card-subtitle>
             <mat-form-field class="example-full-width" appearance="fill">
-                <input id="modelo" formControlName="modelo" placeholder="Ej: Tracker" type="text" matInput>
+                <input id="modelo" formControlName="modelo" placeholder="Ej: 2020" type="number" matInput>
             </mat-form-field>
 
             <mat-card-subtitle class="titulos">Capacidad Motor</mat-card-subtitle>
@@ -20,10 +25,18 @@
 
             <mat-card-subtitle class="titulos">Color</mat-card-subtitle>
             <mat-form-field class="example-full-width" appearance="fill">
-                <input matInput id="color" formControlName="color" placeholder="Ej: Rojo" type="text" matInput>
+                <input id="color" formControlName="color" placeholder="Ej: Rojo" type="text" matInput>
             </mat-form-field>
 
-        </form>
-        <button mat-button style="margin: 15px 0px 0px 40px;" type="submit">AGREGAR</button>
+            <button mat-button style="margin: 15px 0px 0px 40px; color: white; background-color: rgba(129, 54, 179, 0.616);" type="submit">AGREGAR</button>
+        </form>      
     </mat-card-actions>
+</mat-card>
+
+<mat-card class="body" style="background-color: rgba(166, 107, 221, 0.753); color: azure;" *ngIf="mostrar">
+    <p>El promedio de la capacidad del motor es {{promedio()}}</p>
+    <p>El motor de mayor capacidad es {{mayorCapacidadMotor()}}</p>
+    <p>El motor de menor capacidad es {{menorCapacidadMotor()}}</p>
+    <p>El modelo de carro más viejo es {{carroMasViejo()}}</p>
+    <p>El modelo de carro más nuevo es {{carroMasNuevo()}}</p>
 </mat-card>

@@ -1,7 +1,7 @@
 .body{
     max-width: 160px;
-    margin-left: auto;
-    margin-right: auto;
+    
+    margin: auto;
 }
 
 .example-form {
@@ -11,10 +11,10 @@
 }
   
 .example-full-width {
-    width: 50%;
+    width: 100%;
+    margin-bottom: 15px;
 }
 
 .titulos {
-    padding: 10px;
-    margin: 0px;
+    margin-bottom: 0px;
 }

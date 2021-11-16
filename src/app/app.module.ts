@@ -1,5 +1,4 @@
 
-
 import { NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -15,6 +14,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 @NgModule({
@@ -23,6 +23,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     CartaComponent,
     CarrosComponent
   ],
+  
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -32,8 +33,23 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatFormFieldModule,
     ReactiveFormsModule,
     MatInputModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatDialogModule
   ],
+
+  exports: [
+    BrowserModule,
+    AppRoutingModule,
+    MatCardModule,
+    MatIconModule,
+    MatGridListModule,
+    MatFormFieldModule,
+    ReactiveFormsModule,
+    MatInputModule,
+    BrowserAnimationsModule,
+    MatDialogModule
+  ],
+
   providers: [],
   bootstrap: [AppComponent]
 })
