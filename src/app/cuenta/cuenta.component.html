@@ -1,0 +1,26 @@
+<mat-card style="height: 400px; width: 300px; margin: 200px 600px; background-color: chartreuse;">
+    <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+        <div>
+        <mat-form-field class="example-form-field">
+            <!--Icono-->
+        </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field class="example-form-field" appearance="fill" style="padding: 140px 45px 0px 45px;">
+            <input matInput type="text" placeholder="User"  style="background-color: white; padding: 7px;">
+        </mat-form-field>
+        </div>
+        <div>
+        <mat-form-field class="example-form-field" appearance="fill"  style="padding: 0px 45px 0px 45px;" >
+            <input matInput type="text" placeholder="Password"style="background-color: white; padding: 7px">
+        </mat-form-field>
+        </div>
+        <mat-form-field style="padding: 0px 15px 0px 200px;">
+        <button mat-button style="background-color: white; "color="white" type="submit"  [disabled]="!formulario.valid">Entrar</button>
+        </mat-form-field>
+    </form>
+    <mat-card *ngIf="">
+
+
+    </mat-card>
+</mat-card>

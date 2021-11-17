@@ -10,11 +10,15 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { FormularioComponent } from './components/formulario/formulario.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button';
+import { CuentaComponent } from './cuenta/cuenta.component';
+import {MatIconModule} from '@angular/material/icon';
+import { InfoCuentaService } from './info-cuenta.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FormularioComponent
+    FormularioComponent,
+    CuentaComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +28,8 @@ import {MatButtonModule} from '@angular/material/button';
     MatInputModule,
     MatFormFieldModule,
     ReactiveFormsModule,
-    MatButtonModule
+    MatButtonModule,
+    MatIconModule
   ],
   exports: [
     BrowserModule,
@@ -34,12 +39,13 @@ import {MatButtonModule} from '@angular/material/button';
     MatInputModule,
     MatFormFieldModule,
     ReactiveFormsModule,
-    MatButtonModule
+    MatButtonModule,
+    MatIconModule
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
   ],
-  providers: [],
+  providers: [InfoCuentaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { 
