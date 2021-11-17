@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
 
@@ -7,6 +7,13 @@ import { Prueba1Component } from './prueba1/prueba1.component';
 import { HomeComponent } from './spa/componentes/home/home.component';
 import { SpaComponent } from './spa/spa.component';
 import { NavbarComponent } from './spa/componentes/navbar/navbar.component';
+import { MatSliderModule } from '@angular/material/slider';
+import {MatCardModule} from '@angular/material/card';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { FormularioComponent } from './components/formulario/formulario.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import {MatButtonModule} from '@angular/material/button';
 
 //RUTAS
 import { APP_ROUTING } from './app.routes';
@@ -25,8 +32,9 @@ import { HeroesComponent } from './spa/componentes/heroes/heroes.component';
 import { PersonaArrayComponent } from './persona-array/persona-array.component';
 
 @NgModule({
-  declarations: [   
+  declarations: [
     AppComponent,
+    FormularioComponent
     Prueba1Component,
     SpaComponent,
     NavbarComponent,
@@ -36,30 +44,37 @@ import { PersonaArrayComponent } from './persona-array/persona-array.component';
   ],
   imports: [
     BrowserModule,
-    ReactiveFormsModule,
-    MatInputModule,
+    AppRoutingModule,
+    MatSliderModule,
     MatCardModule,
-    MatButtonModule,
+    MatInputModule,
     MatFormFieldModule,
-    BrowserAnimationsModule,
-    MatIconModule,
-    MatToolbarModule,
+    ReactiveFormsModule,
+    MatButtonModule
     APP_ROUTING
-
+    MatToolbarModule,
+    MatIconModule,
   ],
   exports: [
     BrowserModule,
-    ReactiveFormsModule,
-    MatInputModule,
+    AppRoutingModule,
+    MatSliderModule,
     MatCardModule,
-    MatButtonModule,
+    MatInputModule,
     MatFormFieldModule,
-    BrowserAnimationsModule,
-    MatIconModule,
-    MatToolbarModule,
-    
+    ReactiveFormsModule,
+    MatButtonModule
+  ],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
   ],
   providers: [HeroesService],
+  providers: [],
+    MatToolbarModule,
+    MatIconModule,
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+
+}
+
