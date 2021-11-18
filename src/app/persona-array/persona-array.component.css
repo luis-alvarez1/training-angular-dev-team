@@ -1,0 +1,18 @@
+.persona-array{
+    display: flex;
+    justify-content: center;
+    
+    align-items: center;
+}
+
+.body{
+    display: flex;
+    justify-content: center;
+    
+    align-items: center;
+}
+
+.example-full-width {
+    width: 100%;
+    justify-content: space-evenly;
+  }

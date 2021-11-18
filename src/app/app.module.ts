@@ -1,8 +1,12 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { Prueba1Component } from './prueba1/prueba1.component';
+import { HomeComponent } from './spa/componentes/home/home.component';
+import { SpaComponent } from './spa/spa.component';
+import { NavbarComponent } from './spa/componentes/navbar/navbar.component';
 import { MatSliderModule } from '@angular/material/slider';
 import {MatCardModule} from '@angular/material/card';
 import {MatInputModule} from '@angular/material/input';
@@ -12,21 +16,28 @@ import { ReactiveFormsModule } from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button';
 import { CartaComponent } from './carta/carta.component';
 
-import {MatCardModule} from '@angular/material/card';
-import {MatIconModule} from '@angular/material/icon';
-import {MatGridListModule} from '@angular/material/grid-list';
+//RUTAS
+import { APP_ROUTING } from './app.routes';
+
+//SERVICIOS
+import { HeroesService } from './servicios/heroes.service'
+import {MatToolbarModule} from '@angular/material/toolbar';
+import { HeroesComponent } from './spa/componentes/heroes/heroes.component';
+import { PersonaArrayComponent } from './persona-array/persona-array.component';
+
 import {CarrosComponent} from './carros/carros.component';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import { ReactiveFormsModule } from '@angular/forms';
-import {MatInputModule} from '@angular/material/input';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatDialogModule} from '@angular/material/dialog';
-
-
 @NgModule({
   declarations: [
     AppComponent,
     FormularioComponent
+    Prueba1Component,
+    SpaComponent,
+    NavbarComponent,
+    HomeComponent,
+    HeroesComponent,
+    PersonaArrayComponent
     CartaComponent,
     CarrosComponent
   ],
@@ -40,6 +51,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatFormFieldModule,
     ReactiveFormsModule,
     MatButtonModule
+    APP_ROUTING
+    MatToolbarModule,
     MatIconModule,
     MatGridListModule,
     BrowserAnimationsModule,
@@ -58,11 +71,14 @@ import {MatDialogModule} from '@angular/material/dialog';
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
   ],
+  providers: [HeroesService],
     MatIconModule,
     MatGridListModule,
     BrowserAnimationsModule,
     MatDialogModule
   providers: [],
+    MatToolbarModule,
+    MatIconModule,
   bootstrap: [AppComponent]
 })
 export class AppModule { 

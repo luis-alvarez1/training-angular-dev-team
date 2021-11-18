@@ -1,0 +1,25 @@
+<div class="body">
+    <mat-card class="persona-array" style="text-align:center; background-color:darkslategray;">
+        <form [formGroup]='usuarioForm' class="example-form" (ngSubmit)="registrar()">
+            <h1><mat-card-title style="text-align:center">Carta Personas</mat-card-title></h1>
+            
+            <mat-form-field class="example-full-width" style="max-width: 160px" appearance="fill">
+                <input id='nombre' formControlName="nombre" type="text" style="background-color: antiquewhite;" matInput placeholder="Escribe tu nombre">
+            </mat-form-field>
+            <br>
+
+            <mat-form-field class="example-full-width" style="max-width: 160px" appearance="fill">
+                <input id='edad' formControlName="edad" type="number" style="background-color: antiquewhite;" matInput>            
+            </mat-form-field>
+            <br>
+
+            <mat-form-field class="example-full-width" style="max-width: 160px" appearance="fill">
+                <input id='salario' formControlName="salario" type="number" style="background-color: antiquewhite;" matInput>
+            </mat-form-field>
+            <br>
+            <br>
+            <button mat-button type="submit" >SHOW</button>
+
+        </form>
+    </mat-card>
+</div>
