@@ -21,20 +21,17 @@ import { APP_ROUTING } from './app.routes';
 //SERVICIOS
 import { HeroesService } from './servicios/heroes.service'
 
-import {MatInputModule} from '@angular/material/input';
-import {MatCardModule} from '@angular/material/card';
-import {ReactiveFormsModule} from '@angular/forms';
-import {MatButtonModule} from '@angular/material/button';
-import {MatFormFieldModule} from '@angular/material/form-field';
+
 import {MatIconModule} from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { HeroesComponent } from './spa/componentes/heroes/heroes.component';
 import { PersonaArrayComponent } from './persona-array/persona-array.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FormularioComponent
+    FormularioComponent,
     Prueba1Component,
     SpaComponent,
     NavbarComponent,
@@ -43,6 +40,7 @@ import { PersonaArrayComponent } from './persona-array/persona-array.component';
     PersonaArrayComponent
   ],
   imports: [
+    APP_ROUTING,
     BrowserModule,
     AppRoutingModule,
     MatSliderModule,
@@ -50,8 +48,7 @@ import { PersonaArrayComponent } from './persona-array/persona-array.component';
     MatInputModule,
     MatFormFieldModule,
     ReactiveFormsModule,
-    MatButtonModule
-    APP_ROUTING
+    MatButtonModule,
     MatToolbarModule,
     MatIconModule,
   ],
@@ -63,15 +60,14 @@ import { PersonaArrayComponent } from './persona-array/persona-array.component';
     MatInputModule,
     MatFormFieldModule,
     ReactiveFormsModule,
-    MatButtonModule
+    MatButtonModule,
+    MatToolbarModule,
+    MatIconModule,
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
   ],
-  providers: [HeroesService],
-  providers: [],
-    MatToolbarModule,
-    MatIconModule,
+    providers: [HeroesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { 
