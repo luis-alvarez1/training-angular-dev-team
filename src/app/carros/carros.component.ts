@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl, FormGroup} from '@angular/forms';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { Carro } from '../models/Carro';
 
@@ -11,11 +11,11 @@ import { Carro } from '../models/Carro';
 export class CarrosComponent implements OnInit {
 
   carrosForm = new FormGroup ({
-    marca: new FormControl(''),
-    nombre: new FormControl(''),
-    modelo: new FormControl(''),
-    capacidadMotor: new FormControl(''),
-    color: new FormControl('')
+    marca: new FormControl('', Validators.required),
+    nombre: new FormControl('', Validators.required),
+    modelo: new FormControl('', Validators.required),
+    capacidadMotor: new FormControl('', Validators.required),
+    color: new FormControl('', Validators.required)
   });
 
   carros: Array <Carro> = [];
@@ -26,7 +26,10 @@ export class CarrosComponent implements OnInit {
     this.carros.forEach(c => {
       suma += c.capacidadMotor;
     });
-    return suma/this.carros.length;
+    if(suma > 0){
+      return suma/this.carros.length;
+    }
+    return suma;
   }
 
   mayorCapacidadMotor() {
@@ -70,11 +73,9 @@ export class CarrosComponent implements OnInit {
   }   
 
   guardar(){
-    this.carros.push(this.carrosForm.value);
-    console.log(this.carros);
-
-    if(this.carros.length > 1){
-      this.mostrar = true; 
+    
+    if(this.carrosForm.valid){
+      this.carros.push(this.carrosForm.value);
     }
   }
 
