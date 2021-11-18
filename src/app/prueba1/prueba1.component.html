@@ -1,0 +1,24 @@
+<div class="body" >
+
+    <mat-card  class="bicho-card" style="text-align:center">
+
+      <h1>{{titulo}}</h1> 
+      <img mat-card-lg-image [src]="imagen" style="border-radius: 50%;" >
+      <h1 class="title" style="font-size: 25px;">
+  
+        BICHO'S INC
+  
+      </h1>
+      <form [formGroup]='numeroForm' class="example-form" (ngSubmit)="elevarNumero()">
+        <mat-form-field appearance="fill">
+  
+            <input matInput type='number' formControlName='numero'>
+  
+        </mat-form-field>
+    </form>
+      <h1 >
+        Numero al cuadrado: {{numeroCuadrado}}
+      </h1>
+    </mat-card>
+    
+  </div>

@@ -1,0 +1,16 @@
+.body {
+    display: flex;
+    justify-content: center;
+    height: 100;
+    align-items: center;
+  }
+  
+  .title {
+    color:black ;
+  }
+  
+  .bicho-card {
+    background-color:lightslategray;
+      max-width: 400px;
+      margin-bottom: 8px;
+    }
