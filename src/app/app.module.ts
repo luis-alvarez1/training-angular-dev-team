@@ -20,11 +20,16 @@ import { CartaComponent } from './carta/carta.component';
 import { APP_ROUTING } from './app.routes';
 
 //SERVICIOS
-import { HeroesService } from './servicios/heroes.service';
+import { HeroesService } from './servicios/heroes.service'
+
+import {MatIconModule} from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { HeroesComponent } from './spa/componentes/heroes/heroes.component';
 import { PersonaArrayComponent } from './persona-array/persona-array.component';
-
+import { AppRoutingModule } from './app-routing.module';
+import {CarrosComponent} from './carros/carros.component';
+import {MatGridListModule} from '@angular/material/grid-list';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {CarrosComponent} from './carros/carros.component';
 import {MatDialogModule} from '@angular/material/dialog';
 @NgModule({
@@ -42,6 +47,7 @@ import {MatDialogModule} from '@angular/material/dialog';
   ],
   
   imports: [
+    APP_ROUTING,
     BrowserModule,
     AppRoutingModule,
     MatSliderModule,
@@ -50,7 +56,6 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatFormFieldModule,
     ReactiveFormsModule,
     MatButtonModule,
-    APP_ROUTING,
     MatToolbarModule,
     MatIconModule,
     MatGridListModule,
@@ -65,19 +70,14 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatInputModule,
     MatFormFieldModule,
     ReactiveFormsModule,
-    MatButtonModule
+    MatButtonModule,
+    MatToolbarModule,
+    MatIconModule,
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
   ],
-  providers: [HeroesService],
-    MatIconModule,
-    MatGridListModule,
-    BrowserAnimationsModule,
-    MatDialogModule
-  providers: [],
-    MatToolbarModule,
-    MatIconModule,
+    providers: [HeroesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { 
