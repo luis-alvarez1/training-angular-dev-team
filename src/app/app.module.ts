@@ -20,24 +20,23 @@ import { CartaComponent } from './carta/carta.component';
 import { APP_ROUTING } from './app.routes';
 
 //SERVICIOS
-import { HeroesService } from './servicios/heroes.service'
+import { HeroesService } from './servicios/heroes.service';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { HeroesComponent } from './spa/componentes/heroes/heroes.component';
 import { PersonaArrayComponent } from './persona-array/persona-array.component';
 
 import {CarrosComponent} from './carros/carros.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatDialogModule} from '@angular/material/dialog';
 @NgModule({
   declarations: [
     AppComponent,
-    FormularioComponent
+    FormularioComponent,
     Prueba1Component,
     SpaComponent,
     NavbarComponent,
     HomeComponent,
     HeroesComponent,
-    PersonaArrayComponent
+    PersonaArrayComponent,
     CartaComponent,
     CarrosComponent
   ],
@@ -50,8 +49,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatInputModule,
     MatFormFieldModule,
     ReactiveFormsModule,
-    MatButtonModule
-    APP_ROUTING
+    MatButtonModule,
+    APP_ROUTING,
     MatToolbarModule,
     MatIconModule,
     MatGridListModule,
