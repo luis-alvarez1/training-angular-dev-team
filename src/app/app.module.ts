@@ -16,7 +16,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button';
 import { CuentaComponent } from './cuenta/cuenta.component';
 import {MatIconModule} from '@angular/material/icon';
-import { InfoCuentaService } from './info-cuenta.service';
+import { InfoCuentaService } from './cuenta/info-cuenta.service';
 import { MatMenuModule} from '@angular/material/menu';
 //RUTAS
 import { APP_ROUTING } from './app.routes';
