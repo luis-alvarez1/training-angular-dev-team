@@ -27,6 +27,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { HeroesComponent } from './spa/componentes/heroes/heroes.component';
 import { PersonaArrayComponent } from './persona-array/persona-array.component';
 import { AppRoutingModule } from './app-routing.module';
+import { InputCompComponent } from './input-comp/input-comp.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { AppRoutingModule } from './app-routing.module';
     NavbarComponent,
     HomeComponent,
     HeroesComponent,
-    PersonaArrayComponent
+    PersonaArrayComponent,
+    InputCompComponent
   ],
   imports: [
     APP_ROUTING,
@@ -51,6 +53,7 @@ import { AppRoutingModule } from './app-routing.module';
     MatButtonModule,
     MatToolbarModule,
     MatIconModule,
+    BrowserAnimationsModule
   ],
   exports: [
     BrowserModule,
@@ -63,6 +66,7 @@ import { AppRoutingModule } from './app-routing.module';
     MatButtonModule,
     MatToolbarModule,
     MatIconModule,
+    BrowserAnimationsModule
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA

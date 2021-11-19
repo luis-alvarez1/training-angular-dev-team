@@ -1,0 +1,24 @@
+<div class="body">
+    <mat-card class="persona-array" style="text-align:center;">
+        
+        <form  class="example-form" >
+
+            <h1><mat-card-title style="text-align:center">{{etiquita}}</mat-card-title></h1>
+            <mat-form-field style="background-color:azure" class="example-full-width" appearance="fill">
+
+                <input type="email" matInput [formControl]="emailFormControl" placeholder="Info">
+                <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                  Please enter a valid email address
+                </mat-error>
+                <mat-error *ngIf="emailFormControl.hasError('required')">
+                  El correo es <strong>requerido</strong>
+                </mat-error>
+              </mat-form-field>
+              <br>
+            <br>
+            <button [disabled]="emailFormControl.invalid" mat-raised-button color="primary" (click)="mostrar($event)">Primary</button>
+
+        </form>
+    </mat-card>
+</div>
+
