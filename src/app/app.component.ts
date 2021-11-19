@@ -21,6 +21,3 @@ export class AppComponent {
     ];
   }
 }
-
-  resultado(data:any) { }
-}
