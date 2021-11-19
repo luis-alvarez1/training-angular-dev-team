@@ -22,16 +22,14 @@ import { APP_ROUTING } from './app.routes';
 //SERVICIOS
 import { HeroesService } from './servicios/heroes.service'
 
+
 import {MatIconModule} from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { HeroesComponent } from './spa/componentes/heroes/heroes.component';
 import { PersonaArrayComponent } from './persona-array/persona-array.component';
 import { AppRoutingModule } from './app-routing.module';
+
 import {CarrosComponent} from './carros/carros.component';
-import {MatGridListModule} from '@angular/material/grid-list';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {CarrosComponent} from './carros/carros.component';
-import {MatDialogModule} from '@angular/material/dialog';
 @NgModule({
   declarations: [
     AppComponent,
