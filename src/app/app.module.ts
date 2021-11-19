@@ -17,7 +17,7 @@ import {MatButtonModule} from '@angular/material/button';
 import { CuentaComponent } from './cuenta/cuenta.component';
 import {MatIconModule} from '@angular/material/icon';
 import { InfoCuentaService } from './info-cuenta.service';
-
+import { MatMenuModule} from '@angular/material/menu';
 //RUTAS
 import { APP_ROUTING } from './app.routes';
 
@@ -55,6 +55,7 @@ import { AppRoutingModule } from './app-routing.module';
     MatButtonModule,
     MatToolbarModule,
     MatIconModule,
+    MatMenuModule
   ],
   exports: [
     BrowserModule,
@@ -67,6 +68,7 @@ import { AppRoutingModule } from './app-routing.module';
     MatButtonModule,
     MatToolbarModule,
     MatIconModule,
+    MatMenuModule
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA

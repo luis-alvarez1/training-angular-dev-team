@@ -8,8 +8,6 @@ import { InfoCuentaService } from '../info-cuenta.service';
 })
 export class CuentaComponent implements OnInit {
 
-  public usuario: Array<any> [] = []
-
   formulario = new FormGroup ({
     user: new FormControl('',Validators.required),
     password: new FormControl('',Validators.required)
@@ -22,8 +20,10 @@ export class CuentaComponent implements OnInit {
   
   onSubmit(){
     if(this.formulario.valid){
-      this.usuario.push(this.formulario.value);
+      
     }
   }
+
+  
 
 }
