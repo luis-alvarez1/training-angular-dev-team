@@ -25,7 +25,6 @@ import { HeroesService } from './servicios/heroes.service'
 
 import {MatIconModule} from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatGridListModule} from '@angular/material/grid-list';
 import { HeroesComponent } from './spa/componentes/heroes/heroes.component';
 import { PersonaArrayComponent } from './persona-array/persona-array.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -58,7 +57,8 @@ import {CarrosComponent} from './carros/carros.component';
     MatToolbarModule,
     MatIconModule,
     MatGridListModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatDialogModule
   ],
   exports: [
     BrowserModule,
@@ -71,8 +71,6 @@ import {CarrosComponent} from './carros/carros.component';
     MatButtonModule,
     MatToolbarModule,
     MatIconModule,
-    MatGridListModule,
-    BrowserAnimationsModule
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA

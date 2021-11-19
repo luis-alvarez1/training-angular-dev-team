@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
 import { Carro } from '../models/Carro';
 
 @Component({
@@ -78,6 +79,6 @@ export class CarrosComponent implements OnInit {
     }
   }
 
-  constructor() {}
+  constructor(public dialog: MatDialog) {}
   ngOnInit() { }
 }
