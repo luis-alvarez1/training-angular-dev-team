@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Personas } from './models/Personas';
+import Swal from 'sweetalert2';
 
 
 @Component({
@@ -19,5 +20,12 @@ export class AppComponent {
       {nombre : "Said", apellido: "Salcedo", sexo : "Masculino", edad : 19},
       {nombre : "Juan Daniel", apellido: "Guerrero", sexo : "Masculino", edad : 17}
     ];
+  }
+  mostrar(correo: string){
+    Swal.fire(
+      'Correo Verificado',
+      `Su correo (${correo}) es valido`,
+      'success'
+    )
   }
 }

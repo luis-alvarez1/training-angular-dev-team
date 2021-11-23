@@ -4,5 +4,5 @@
 <app-persona-array></app-persona-array>
 <app-carros>
 </app-carros>
-<app-input-comp etiquita="Email">
+<app-input-comp etiquita="Email" [min]='5' [max]="100" (correo)="mostrar($event)">
 </app-input-comp>

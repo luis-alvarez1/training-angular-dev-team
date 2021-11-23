@@ -1,24 +1,52 @@
 <div class="body">
-    <mat-card class="persona-array" style="text-align:center;">
+  <mat-card class="persona-array" style="text-align: center">
+
+    <form [formGroup]="form" class="example-form" (ngSubmit)="mostrar()">
+      <h1>
+        <mat-card-title style="text-align: center">{{
+          etiquita
+        }}</mat-card-title>
+      </h1>
+
+      <mat-form-field
         
-        <form  class="example-form" >
+        class="example-full-width"
+        appearance="fill"
+      >
+        <input
+          type="email"
+          matInput
+          formControlName="emailFormControl"
+          placeholder="Info"
+          [minlength]="min"
+          [maxlength]="max"
+        />
 
-            <h1><mat-card-title style="text-align:center">{{etiquita}}</mat-card-title></h1>
-            <mat-form-field style="background-color:azure" class="example-full-width" appearance="fill">
+        <mat-error *ngIf="form.controls.emailFormControl.errors?.minlength">
+          Poner al menos {{ form.controls.emailFormControl.errors?.minlength?.requiredLength }}
+        </mat-error>
 
-                <input type="email" matInput [formControl]="emailFormControl" placeholder="Info">
-                <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
-                  Please enter a valid email address
-                </mat-error>
-                <mat-error *ngIf="emailFormControl.hasError('required')">
-                  El correo es <strong>requerido</strong>
-                </mat-error>
-              </mat-form-field>
-              <br>
-            <br>
-            <button [disabled]="emailFormControl.invalid" mat-raised-button color="primary" (click)="mostrar($event)">Primary</button>
+        <mat-error
+          *ngIf="!form.controls.emailFormControl.hasError('required') && form.controls.emailFormControl.dirty">
+          Por favor inserte el correo electrónico
+        </mat-error>
 
-        </form>
-    </mat-card>
+
+        <mat-error *ngIf="form.controls.emailFormControl.hasError('required')">
+          El correo es <strong>requerido</strong>
+        </mat-error>
+      </mat-form-field>
+      <br />
+    
+      <button
+        [disabled]="form.controls.emailFormControl.invalid"
+        mat-raised-button
+        color="primary"
+        type="submit"
+      >
+        Verificar
+      </button>
+    </form>
+  </mat-card>
 </div>
 
