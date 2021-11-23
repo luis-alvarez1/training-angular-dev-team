@@ -46,7 +46,7 @@ import {CarrosComponent} from './carros/carros.component';
     HomeComponent,
     HeroesComponent,
     PersonaArrayComponent,
-    CarrosComponent
+    CarrosComponent,
     CartaComponent,
     CuentaComponent,
   ],
@@ -64,7 +64,7 @@ import {CarrosComponent} from './carros/carros.component';
     MatToolbarModule,
     MatIconModule,
     MatGridListModule,
-    MatDialogModule
+    MatDialogModule,
     MatMenuModule,
     BrowserAnimationsModule,
   ],
