@@ -44,7 +44,7 @@ import {CarrosComponent} from './carros/carros.component';
     HeroesComponent,
     PersonaArrayComponent,
     CartaComponent,
-    CarrosComponent
+    CarrosComponent,
     InputCompComponent
   ],
   
