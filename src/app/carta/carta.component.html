@@ -1,0 +1,25 @@
+
+<div class="body">
+  <mat-card class="example-card">
+    <mat-card [ngStyle] = "{'background-color': color}" style="color: aliceblue;">
+      <div style="text-align: center;" >{{titulo}}</div>
+      <mat-grid-list cols="1" rowHeight="60px">
+        <mat-grid-tile>
+        <mat-icon style="display: contents;">person</mat-icon>
+        <tr *ngFor="let dato of listDatos">
+          <td style="padding: 10px;">{{dato}}</td>
+        </tr>
+      </mat-grid-tile>
+      </mat-grid-list>     
+    </mat-card>
+
+    <tr *ngFor = "let personas of listPersonas">
+      <mat-icon style="padding-right: 15px;">group</mat-icon>
+      <td>{{personas.nombre}}</td>
+      <td  style="padding: 10px;">{{personas.apellido}}</td>
+      <td  style="padding: 10px;">{{personas.sexo}}</td>
+      <td>{{personas.edad}}</td>
+    </tr>
+  </mat-card>
+</div>
+

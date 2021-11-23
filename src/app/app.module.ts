@@ -14,6 +14,9 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { FormularioComponent } from './components/formulario/formulario.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button';
+import { CartaComponent } from './carta/carta.component';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatDialogModule} from '@angular/material/dialog';
 
 //RUTAS
 import { APP_ROUTING } from './app.routes';
@@ -29,6 +32,7 @@ import { PersonaArrayComponent } from './persona-array/persona-array.component';
 import { AppRoutingModule } from './app-routing.module';
 import { InputCompComponent } from './input-comp/input-comp.component';
 
+import {CarrosComponent} from './carros/carros.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,8 +43,11 @@ import { InputCompComponent } from './input-comp/input-comp.component';
     HomeComponent,
     HeroesComponent,
     PersonaArrayComponent,
+    CartaComponent,
+    CarrosComponent
     InputCompComponent
   ],
+  
   imports: [
     APP_ROUTING,
     BrowserModule,
@@ -53,7 +60,9 @@ import { InputCompComponent } from './input-comp/input-comp.component';
     MatButtonModule,
     MatToolbarModule,
     MatIconModule,
-    BrowserAnimationsModule
+    MatGridListModule,
+    BrowserAnimationsModule,
+    MatDialogModule
   ],
   exports: [
     BrowserModule,
