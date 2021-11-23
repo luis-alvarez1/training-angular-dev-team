@@ -1,6 +1,6 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
+
 
 import { AppComponent } from './app.component';
 import { Prueba1Component } from './prueba1/prueba1.component';
@@ -18,6 +18,7 @@ import { CuentaComponent } from './cuenta/cuenta.component';
 import {MatIconModule} from '@angular/material/icon';
 import { InfoCuentaService } from './cuenta/info-cuenta.service';
 import { MatMenuModule} from '@angular/material/menu';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 //RUTAS
 import { APP_ROUTING } from './app.routes';
 
@@ -41,7 +42,8 @@ import { AppRoutingModule } from './app-routing.module';
     HomeComponent,
     HeroesComponent,
     PersonaArrayComponent,
-    CuentaComponent
+    CuentaComponent,
+    
   ],
   imports: [
     APP_ROUTING,
@@ -55,7 +57,8 @@ import { AppRoutingModule } from './app-routing.module';
     MatButtonModule,
     MatToolbarModule,
     MatIconModule,
-    MatMenuModule
+    MatMenuModule,
+    BrowserAnimationsModule
   ],
   exports: [
     BrowserModule,
@@ -68,7 +71,8 @@ import { AppRoutingModule } from './app-routing.module';
     MatButtonModule,
     MatToolbarModule,
     MatIconModule,
-    MatMenuModule
+    MatMenuModule,
+    BrowserAnimationsModule
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA

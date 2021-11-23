@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class InfoCuentaService {
 
   public userS: string = 'admin';
-  public passwordS: string = '1234';
+  public passwordS: string = '123456';
 
   constructor() { }
   getUserS() {
@@ -17,8 +17,7 @@ export class InfoCuentaService {
     return this.passwordS;
   }
 
-  validarUsuario(username:String, password:String ): Boolean { 
-    return (this.userS == username &&  this.passwordS == password)
+  validarUsuario(username: String, password: String): Boolean {
+    return (this.userS == username && this.passwordS == password)
   }
-
 }

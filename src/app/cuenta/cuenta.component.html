@@ -1,33 +1,33 @@
-<mat-card style="height: 400px; width: 300px; margin: 200px 600px; background-color: chartreuse;">
-    <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+<mat-card
+    style="height: 400px; width: 300px; margin: 200px 600px; background-image: url(https://st.depositphotos.com/1001069/2878/i/600/depositphotos_28780557-stock-photo-abstract-background.jpg);">
+    <form [formGroup]="formulario">
         <div>
-        <mat-form-field class="example-form-field">
-            <!--Icono-->
-        </mat-form-field>
+            <img src="https://www.crearlogogratisonline.com/images/crearlogogratis_1024x1024_01.png"
+                style="height: 100px; width: 100px; margin: 5px 100px 0px 100px;" alt="">
         </div>
         <div>
-            <mat-form-field class="example-form-field" appearance="fill" style="padding: 140px 45px 0px 45px;">
-            <input matInput type="text" placeholder="User"  style="background-color: white; padding: 7px;">
-        </mat-form-field>
+            <mat-form-field class="example-full-width" appearance="fill" style="padding: 40px 30px 0px 45px;">
+                <mat-label>User</mat-label>
+                <input matInput type="text" formControlName="user">
+            </mat-form-field>
         </div>
         <div>
-        <mat-form-field class="example-form-field" appearance="fill"  style="padding: 0px 45px 0px 45px;" >
-            <input matInput type="text" placeholder="Password"style="background-color: white; padding: 7px">
-        </mat-form-field>
+            <mat-form-field class="example-form-field" appearance="fill" style="padding: 0px 45px 0px 45px;">
+                <mat-label>Password</mat-label>
+                <input matInput type="password" formControlName="password">
+            </mat-form-field>
         </div>
-        <mat-form-field style="padding: 0px 15px 0px 200px;">
-        <button mat-button style="background-color: white; "color="white" type="submit"  [disabled]="!formulario.valid">Entrar</button>
-        </mat-form-field>
+        <button mat-button style="background-color: white; margin: 18px 100px;" color="white" (click)="onSubmit()"
+            [disabled]="!formulario.valid">Entrar</button>
     </form>
+
     <mat-card *ngIf="flag">
         <div>
-        <mat-form-field>
             <button mat-button [matMenuTriggerFor]="menu">Menu</button>
             <mat-menu #menu="matMenu">
-            <button mat-menu-item>Item 1</button>
-            <button mat-menu-item>Item 2</button>
+                <button mat-menu-item>Item 1</button>
+                <button mat-menu-item>Item 2</button>
             </mat-menu>
-        </mat-form-field>
         </div>
     </mat-card>
 </mat-card>
