@@ -1,0 +1,52 @@
+<div class="body">
+  <mat-card class="persona-array" style="text-align: center">
+
+    <form [formGroup]="form" class="example-form" (ngSubmit)="mostrar()">
+      <h1>
+        <mat-card-title style="text-align: center">{{
+          etiquita
+        }}</mat-card-title>
+      </h1>
+
+      <mat-form-field
+        
+        class="example-full-width"
+        appearance="fill"
+      >
+        <input
+          type="email"
+          matInput
+          formControlName="emailFormControl"
+          placeholder="Info"
+          [minlength]="min"
+          [maxlength]="max"
+        />
+
+        <mat-error *ngIf="form.controls.emailFormControl.errors?.minlength">
+          Poner al menos {{ form.controls.emailFormControl.errors?.minlength?.requiredLength }}
+        </mat-error>
+
+        <mat-error
+          *ngIf="!form.controls.emailFormControl.hasError('required') && form.controls.emailFormControl.dirty">
+          Por favor inserte el correo electrónico
+        </mat-error>
+
+
+        <mat-error *ngIf="form.controls.emailFormControl.hasError('required')">
+          El correo es <strong>requerido</strong>
+        </mat-error>
+      </mat-form-field>
+      <br />
+    
+      <button
+        [disabled]="form.controls.emailFormControl.invalid"
+        mat-raised-button
+        color="primary"
+        type="submit"
+      >
+        Verificar
+      </button>
+    </form>
+  </mat-card>
+</div>
+

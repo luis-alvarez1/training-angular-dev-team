@@ -30,6 +30,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { HeroesComponent } from './spa/componentes/heroes/heroes.component';
 import { PersonaArrayComponent } from './persona-array/persona-array.component';
 import { AppRoutingModule } from './app-routing.module';
+import { InputCompComponent } from './input-comp/input-comp.component';
 
 import {CarrosComponent} from './carros/carros.component';
 @NgModule({
@@ -43,7 +44,8 @@ import {CarrosComponent} from './carros/carros.component';
     HeroesComponent,
     PersonaArrayComponent,
     CartaComponent,
-    CarrosComponent
+    CarrosComponent,
+    InputCompComponent
   ],
   
   imports: [
@@ -73,6 +75,7 @@ import {CarrosComponent} from './carros/carros.component';
     MatButtonModule,
     MatToolbarModule,
     MatIconModule,
+    BrowserAnimationsModule
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
