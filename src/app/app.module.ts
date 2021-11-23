@@ -14,6 +14,9 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { FormularioComponent } from './components/formulario/formulario.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button';
+import { CartaComponent } from './carta/carta.component';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatDialogModule} from '@angular/material/dialog';
 import { CuentaComponent } from './cuenta/cuenta.component';
 import {MatIconModule} from '@angular/material/icon';
 import { InfoCuentaService } from './cuenta/info-cuenta.service';
@@ -32,6 +35,7 @@ import { HeroesComponent } from './spa/componentes/heroes/heroes.component';
 import { PersonaArrayComponent } from './persona-array/persona-array.component';
 import { AppRoutingModule } from './app-routing.module';
 
+import {CarrosComponent} from './carros/carros.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,9 +46,11 @@ import { AppRoutingModule } from './app-routing.module';
     HomeComponent,
     HeroesComponent,
     PersonaArrayComponent,
+    CarrosComponent
+    CartaComponent,
     CuentaComponent,
-    
   ],
+  
   imports: [
     APP_ROUTING,
     BrowserModule,
@@ -57,8 +63,10 @@ import { AppRoutingModule } from './app-routing.module';
     MatButtonModule,
     MatToolbarModule,
     MatIconModule,
+    MatGridListModule,
+    MatDialogModule
     MatMenuModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
   ],
   exports: [
     BrowserModule,
