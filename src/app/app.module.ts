@@ -32,6 +32,7 @@ import { PersonaArrayComponent } from './persona-array/persona-array.component';
 import { AppRoutingModule } from './app-routing.module';
 
 import {CarrosComponent} from './carros/carros.component';
+import { NumericoComponent } from './numerico/numerico.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,7 +44,8 @@ import {CarrosComponent} from './carros/carros.component';
     HeroesComponent,
     PersonaArrayComponent,
     CartaComponent,
-    CarrosComponent
+    CarrosComponent,
+    NumericoComponent
   ],
   
   imports: [

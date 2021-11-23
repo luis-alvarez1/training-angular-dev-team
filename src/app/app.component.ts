@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { Personas } from './models/Personas';
-
 
 @Component({
   selector: 'app-root',
@@ -8,16 +6,14 @@ import { Personas } from './models/Personas';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  tituloDesdePadre = 'LISTADO CUMPLEAÑOS...';
-  colorDesdePadre = "red";
-  listadoPersonas: Personas[]; 
-  listadoDatos: string[] = ["Nombre", "Apellido", "Sexo", "Edad"];
+  numeroPadre = "300";
+  nuevoNumeroPadre = "";
+
+  addNumero(newNumeroEvent: string){
+    this.nuevoNumeroPadre = newNumeroEvent;
+  }
 
   constructor(){
-    this.listadoPersonas =  [
-      {nombre : "Katherin", apellido: "Perez", sexo : "Femenino", edad : 18},
-      {nombre : "Said", apellido: "Salcedo", sexo : "Masculino", edad : 19},
-      {nombre : "Juan Daniel", apellido: "Guerrero", sexo : "Masculino", edad : 17}
-    ];
+    
   }
 }
