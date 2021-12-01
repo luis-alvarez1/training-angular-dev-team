@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,14 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  numeroPadre = "300";
-  nuevoNumeroPadre = "";
 
-  addNumero(newNumeroEvent: string){
-    this.nuevoNumeroPadre = newNumeroEvent;
+  nuevoNumero: number = 0;
+
+  showNumero(newNumeroEvent: number){
+    this.nuevoNumero = newNumeroEvent;
   }
 
   constructor(){
-    
   }
 }

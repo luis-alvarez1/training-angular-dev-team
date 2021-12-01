@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-numerico',
@@ -6,17 +7,26 @@ import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
   styleUrls: ['./numerico.component.css']
 })
 export class NumericoComponent implements OnInit {
+  @Output() newNumeroEvent: EventEmitter<number> = new EventEmitter<number>();
+  
+  @Input() min: number = 0;
+  @Input() max: number = 100;
 
-  @Input() numero = "200";
-  @Output() newNumeroEvent = new EventEmitter<string>();
+  public formGroup: FormGroup = new FormGroup({
+    numero: new FormControl('',[
+      Validators.required,
+      Validators.min(this.min),
+      Validators.max(this.max)
+    ]),
+  });
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor() {
   }
 
-  addNewNumero(value: string) {
-    this.newNumeroEvent.emit(value);
+  ngOnInit() {
   }
 
+  showNewNumero() {
+    this.newNumeroEvent.emit(this.formGroup.controls.numero.value);
+  }  
 }

@@ -1,5 +1,5 @@
 <div class="parent">
-    <app-numerico [numero]="numeroPadre" (newNumeroEvent)="addNumero($event)">
+    <app-numerico [min] = 1 [max] = 200 (newNumeroEvent)="showNumero($event)">   
     </app-numerico>
-    <p style="text-align: center;">{{nuevoNumeroPadre}}</p>
+    <p style="text-align: center;">{{nuevoNumero}}</p>
 </div>
