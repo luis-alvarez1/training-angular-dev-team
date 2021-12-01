@@ -4,6 +4,8 @@
 <app-persona-array></app-persona-array>
 <app-carros>
 </app-carros>
+<app-input-comp etiquita="Email" [min]='5' [max]="100" (correo)="mostrar($event)">
+</app-input-comp>
 <div>
     <app-numerico [min] = 1 [max] = 200 (newNumeroEvent)="showNumero($event)"></app-numerico>
     <p style="text-align: center;">{{nuevoNumero}}</p>

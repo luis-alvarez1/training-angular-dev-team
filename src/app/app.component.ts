@@ -1,4 +1,6 @@
-import { Component} from '@angular/core';
+import { Component } from '@angular/core';
+import { Personas } from './models/Personas';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-root',
@@ -14,5 +16,12 @@ export class AppComponent {
   }
 
   constructor(){
+  }
+  mostrar(correo: string){
+    Swal.fire(
+      'Correo Verificado',
+      `Su correo (${correo}) es valido`,
+      'success'
+    )
   }
 }
