@@ -1,5 +1,10 @@
-<div class="parent">
-    <app-numerico [min] = 1 [max] = 200 (newNumeroEvent)="showNumero($event)">   
-    </app-numerico>
+<app-formulario>
+</app-formulario>
+<app-cuenta></app-cuenta>
+<app-persona-array></app-persona-array>
+<app-carros>
+</app-carros>
+<div>
+    <app-numerico [min] = 1 [max] = 200 (newNumeroEvent)="showNumero($event)"></app-numerico>
     <p style="text-align: center;">{{nuevoNumero}}</p>
 </div>
