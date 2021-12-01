@@ -23,6 +23,7 @@ import { APP_ROUTING } from './app.routes';
 
 //SERVICIOS
 import { HeroesService } from './servicios/heroes.service'
+import { MascotasService } from './servicios/mascotas.service'
 
 
 import {MatIconModule} from '@angular/material/icon';
@@ -32,7 +33,10 @@ import { PersonaArrayComponent } from './persona-array/persona-array.component';
 import { AppRoutingModule } from './app-routing.module';
 import { InputCompComponent } from './input-comp/input-comp.component';
 
+
 import {CarrosComponent} from './carros/carros.component';
+import { MascotasComponent } from './mascotas/mascotas.component';
+import { ToolbarComponent } from './toolbar/toolbar.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,7 +49,9 @@ import {CarrosComponent} from './carros/carros.component';
     PersonaArrayComponent,
     CartaComponent,
     CarrosComponent,
-    InputCompComponent
+    InputCompComponent,
+    MascotasComponent,
+    ToolbarComponent
   ],
   
   imports: [
@@ -80,7 +86,7 @@ import {CarrosComponent} from './carros/carros.component';
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
   ],
-    providers: [HeroesService],
+    providers: [HeroesService,MascotasService],
   bootstrap: [AppComponent]
 })
 export class AppModule { 

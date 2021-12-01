@@ -1,0 +1,19 @@
+<div class="card-columns" >
+
+    <mat-card style="background-color: cornflowerblue;" class="example-card" *ngFor="let pets of mascotas">
+        <mat-card-title-group>
+          <mat-card-title>Nombre: {{pets.nombre}}</mat-card-title>
+        </mat-card-title-group>
+        <img class="card-img-top img-fluid" [src]="pets.img" [alt]='pets.nombre' >
+        <mat-card-content>
+            <strong>{{pets.animal}}</strong> 
+            <br>
+          Edad: {{pets.edad}}
+          <br>
+          Raza: {{pets.raza}}
+          <br>
+
+        </mat-card-content> 
+      </mat-card>
+
+</div>
