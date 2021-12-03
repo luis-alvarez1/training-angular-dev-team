@@ -1,8 +1,10 @@
 <mat-card style="background-image: url(https://thumbs.dreamstime.com/b/fondo-de-degradado-amarillo-plantilla-folleto-para-dise%C3%B1o-envases-215588691.jpg); margin: 200px 600px; height: 300px; width: 250px;">
-<mat-form-field style="margin: 100px 20px;">
+<img style="height: 100px; width: 100px; margin: 10px 60px;" src="https://png.pngtree.com/png-clipart/20210309/original/pngtree-samurai-esport-logo-design-png-image_5879191.jpg">
+<mat-form-field style="margin: 60px 20px;">
     <mat-label>{{label}}</mat-label>
-        <mat-select id="comida" name="comida" >
-            <mat-option *ngFor="let food of comida" [value]="comida">{{food}}</mat-option>
+        <mat-select id="comida" name="comida" value="none">
+            <mat-option  value="none">none</mat-option>
+            <mat-option *ngFor="let food of comida" [value]="food">{{food}}</mat-option>
         </mat-select>
 </mat-form-field>
 </mat-card>

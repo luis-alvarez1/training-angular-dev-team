@@ -13,7 +13,7 @@ export class AppComponent {
   listadoPersonas: Personas[]; 
   listadoDatos: string[] = ["Nombre", "Apellido", "Sexo", "Edad"];
 
-  comida: string[] = [];
+  comida: string[] = ['Hamburguesa','Pizza','Tacos','Pastas'];
 
   constructor(){
     this.listadoPersonas =  [
