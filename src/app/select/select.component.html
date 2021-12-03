@@ -1,13 +1,8 @@
-<mat-card style="background-color: rgb(217, 255, 0); margin: 200px 600px; height: 400px; width: 500px;">
-<mat-form-field>
-    <mat-label></mat-label>
-    <mat-select>
-        <mat-option></mat-option>
-        <mat-option></mat-option>
-        <mat-option></mat-option>
-    </mat-select>
+<mat-card style="background-image: url(https://thumbs.dreamstime.com/b/fondo-de-degradado-amarillo-plantilla-folleto-para-dise%C3%B1o-envases-215588691.jpg); margin: 200px 600px; height: 300px; width: 250px;">
+<mat-form-field style="margin: 100px 20px;">
+    <mat-label>{{label}}</mat-label>
+        <mat-select id="comida" name="comida" >
+            <mat-option *ngFor="let food of comida" [value]="comida">{{food}}</mat-option>
+        </mat-select>
 </mat-form-field>
-
-
-
 </mat-card>

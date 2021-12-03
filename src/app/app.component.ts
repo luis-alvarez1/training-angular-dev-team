@@ -1,7 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output } from '@angular/core';
 import { Personas } from './models/Personas';
 import Swal from 'sweetalert2';
-
 
 @Component({
   selector: 'app-root',
@@ -14,6 +13,8 @@ export class AppComponent {
   listadoPersonas: Personas[]; 
   listadoDatos: string[] = ["Nombre", "Apellido", "Sexo", "Edad"];
 
+  comida: string[] = [];
+
   constructor(){
     this.listadoPersonas =  [
       {nombre : "Katherin", apellido: "Perez", sexo : "Femenino", edad : 18},
@@ -21,6 +22,7 @@ export class AppComponent {
       {nombre : "Juan Daniel", apellido: "Guerrero", sexo : "Masculino", edad : 17}
     ];
   }
+
   mostrar(correo: string){
     Swal.fire(
       'Correo Verificado',
