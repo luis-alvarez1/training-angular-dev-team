@@ -19,9 +19,6 @@ export class AppComponent {
     this.nuevoNumero = newNumeroEvent;
   }
 
-  comida: string[] = ['Hamburguesa','Pizza','Tacos','Pastas'];
-  selected: any;
-
   constructor(){
     this.listadoPersonas =  [
       {nombre : "Katherin", apellido: "Perez", sexo : "Femenino", edad : 18},
@@ -29,16 +26,11 @@ export class AppComponent {
       {nombre : "Juan Daniel", apellido: "Guerrero", sexo : "Masculino", edad : 17}
     ];
   }
-
   mostrar(correo: string){
     Swal.fire(
       'Correo Verificado',
       `Su correo (${correo}) es valido`,
       'success'
     )
-  }
-
-  onValorSelected(valSelected: string){
-    this.selected = valSelected;
   }
 }
