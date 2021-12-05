@@ -47,8 +47,9 @@ import { NumericoComponent } from './numerico/numerico.component';
     HeroesComponent,
     PersonaArrayComponent,
     CartaComponent,
+    CarrosComponent,
     InputCompComponent,
-    CuentaComponent
+    CuentaComponent,
     NumericoComponent
   ],
   
