@@ -50,7 +50,8 @@ import { NumericoComponent } from './numerico/numerico.component';
     CarrosComponent,
     InputCompComponent,
     CuentaComponent,
-    NumericoComponent
+    NumericoComponent,
+    SelectComponent
   ],
   
   imports: [
