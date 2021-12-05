@@ -1,6 +1,8 @@
 <app-formulario>
 </app-formulario>
 <app-cuenta></app-cuenta>
+<app-select label= "Comida Rapida" [comida]="comida" (valSelected)="onValorSelected($event)">
+</app-select>
 <app-persona-array></app-persona-array>
 <app-carros>
 </app-carros>

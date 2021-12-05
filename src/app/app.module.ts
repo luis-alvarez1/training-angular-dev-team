@@ -25,7 +25,7 @@ import { APP_ROUTING } from './app.routes';
 import { HeroesService } from './servicios/heroes.service'
 
 import {MatMenuModule} from '@angular/material/menu';
-
+import {MatSelectModule} from '@angular/material/select';
 import {MatIconModule} from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { HeroesComponent } from './spa/componentes/heroes/heroes.component';
@@ -35,6 +35,7 @@ import { InputCompComponent } from './input-comp/input-comp.component';
 
 import {CarrosComponent} from './carros/carros.component';
 import { CuentaComponent } from './cuenta/cuenta.component';
+import { SelectComponent } from './select/select.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,7 +49,8 @@ import { CuentaComponent } from './cuenta/cuenta.component';
     CartaComponent,
     CarrosComponent,
     InputCompComponent,
-    CuentaComponent
+    CuentaComponent,
+    SelectComponent
   ],
   
   imports: [
@@ -66,7 +68,8 @@ import { CuentaComponent } from './cuenta/cuenta.component';
     MatGridListModule,
     BrowserAnimationsModule,
     MatDialogModule,
-    MatMenuModule
+    MatMenuModule,
+    MatSelectModule
   ],
   exports: [
     BrowserModule,
@@ -80,7 +83,8 @@ import { CuentaComponent } from './cuenta/cuenta.component';
     MatToolbarModule,
     MatIconModule,
     BrowserAnimationsModule,
-    MatMenuModule
+    MatMenuModule,
+    MatSelectModule
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
