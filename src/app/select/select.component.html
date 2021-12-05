@@ -4,7 +4,7 @@
     <mat-label>{{label}}</mat-label>
         <mat-select id="comida" name="comida" value="none">
             <mat-option  value="none">none</mat-option>
-            <mat-option *ngFor="let food of comida" [value]="food">{{food}}</mat-option>
+            <mat-option *ngFor="let food of comida" [value]="food" (click)=runOnChange(food)>{{food}}</mat-option>
         </mat-select>
 </mat-form-field>
 </mat-card>

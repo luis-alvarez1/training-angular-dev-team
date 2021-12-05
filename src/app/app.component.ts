@@ -1,4 +1,4 @@
-import { Component, Input, Output } from '@angular/core';
+import { Component } from '@angular/core';
 import { Personas } from './models/Personas';
 import Swal from 'sweetalert2';
 
@@ -14,6 +14,7 @@ export class AppComponent {
   listadoDatos: string[] = ["Nombre", "Apellido", "Sexo", "Edad"];
 
   comida: string[] = ['Hamburguesa','Pizza','Tacos','Pastas'];
+  selected: any;
 
   constructor(){
     this.listadoPersonas =  [
@@ -29,5 +30,9 @@ export class AppComponent {
       `Su correo (${correo}) es valido`,
       'success'
     )
+  }
+
+  onValorSelected(valSelected: string){
+    this.selected = valSelected;
   }
 }
