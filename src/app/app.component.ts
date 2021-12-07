@@ -13,11 +13,8 @@ export class AppComponent {
   listadoPersonas: Personas[]; 
   listadoDatos: string[] = ["Nombre", "Apellido", "Sexo", "Edad"];
 
-  nuevoNumero: number = 0;
-
-  showNumero(newNumeroEvent: number){
-    this.nuevoNumero = newNumeroEvent;
-  }
+  comida: string[] = ['Hamburguesa','Pizza','Tacos','Pastas'];
+  selected: any;
 
   constructor(){
     this.listadoPersonas =  [
@@ -26,11 +23,16 @@ export class AppComponent {
       {nombre : "Juan Daniel", apellido: "Guerrero", sexo : "Masculino", edad : 17}
     ];
   }
+
   mostrar(correo: string){
     Swal.fire(
       'Correo Verificado',
       `Su correo (${correo}) es valido`,
       'success'
     )
+  }
+
+  onValorSelected(valSelected: string){
+    this.selected = valSelected;
   }
 }
