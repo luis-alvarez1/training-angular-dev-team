@@ -51,7 +51,7 @@ import { SelectComponent } from './select/select.component';
     CarrosComponent,
     InputCompComponent,
     CuentaComponent,
-    NumericoComponent
+    NumericoComponent,
     SelectComponent
   ],
   
