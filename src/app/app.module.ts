@@ -35,6 +35,7 @@ import { InputCompComponent } from './input-comp/input-comp.component';
 
 import {CarrosComponent} from './carros/carros.component';
 import { CuentaComponent } from './cuenta/cuenta.component';
+import { NumericoComponent } from './numerico/numerico.component';
 import { SelectComponent } from './select/select.component';
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { SelectComponent } from './select/select.component';
     CarrosComponent,
     InputCompComponent,
     CuentaComponent,
+    NumericoComponent,
     SelectComponent
   ],
   
