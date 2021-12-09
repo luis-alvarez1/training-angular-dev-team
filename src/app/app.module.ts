@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { Prueba1Component } from './prueba1/prueba1.component';
 import { HomeComponent } from './spa/componentes/home/home.component';
 import { SpaComponent } from './spa/spa.component';
-import { NavbarComponent } from './spa/componentes/navbar/navbar.component';
 import { MatSliderModule } from '@angular/material/slider';
 import {MatCardModule} from '@angular/material/card';
 import {MatInputModule} from '@angular/material/input';
@@ -23,6 +22,7 @@ import { APP_ROUTING } from './app.routes';
 
 //SERVICIOS
 import { HeroesService } from './servicios/heroes.service'
+import { MascotasService } from './mascotas/mascotas.service'
 
 import {MatMenuModule} from '@angular/material/menu';
 import {MatSelectModule} from '@angular/material/select';
@@ -33,7 +33,10 @@ import { PersonaArrayComponent } from './persona-array/persona-array.component';
 import { AppRoutingModule } from './app-routing.module';
 import { InputCompComponent } from './input-comp/input-comp.component';
 
+
 import {CarrosComponent} from './carros/carros.component';
+import { MascotasComponent } from './mascotas/mascotas.component';
+import { ToolbarComponent } from './toolbar/toolbar.component';
 import { CuentaComponent } from './cuenta/cuenta.component';
 import { NumericoComponent } from './numerico/numerico.component';
 import { SelectComponent } from './select/select.component';
@@ -43,16 +46,17 @@ import { SelectComponent } from './select/select.component';
     FormularioComponent,
     Prueba1Component,
     SpaComponent,
-    NavbarComponent,
     HomeComponent,
     HeroesComponent,
     PersonaArrayComponent,
     CartaComponent,
     CarrosComponent,
-    InputCompComponent,
+    MascotasComponent,
+    ToolbarComponent,
     CuentaComponent,
     NumericoComponent,
-    SelectComponent
+    SelectComponent,
+    InputCompComponent,
   ],
   
   imports: [
@@ -91,7 +95,7 @@ import { SelectComponent } from './select/select.component';
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
   ],
-    providers: [HeroesService],
+    providers: [HeroesService,MascotasService],
   bootstrap: [AppComponent]
 })
 export class AppModule { 
