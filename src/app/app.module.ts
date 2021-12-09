@@ -56,8 +56,8 @@ import { PacientesService } from './admin-pacientes/pacientes.service';
     CuentaComponent,
     SelectComponent,
     AdminPacientesComponent,
-    ListaPacientesComponent
-    NumericoComponent,
+    ListaPacientesComponent,
+    NumericoComponent
   ],
   
   imports: [
