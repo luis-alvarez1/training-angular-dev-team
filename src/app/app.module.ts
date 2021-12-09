@@ -100,8 +100,7 @@ import { PacientesService } from './admin-pacientes/pacientes.service';
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
   ],
-    providers: [HeroesService,MascotasService],
-    providers: [HeroesService, PacientesService],
+    providers: [HeroesService,MascotasService,PacientesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { 
