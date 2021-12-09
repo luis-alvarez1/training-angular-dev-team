@@ -25,7 +25,8 @@ import { APP_ROUTING } from './app.routes';
 import { HeroesService } from './servicios/heroes.service'
 import { MascotasService } from './mascotas/mascotas.service'
 
-
+import {MatMenuModule} from '@angular/material/menu';
+import {MatSelectModule} from '@angular/material/select';
 import {MatIconModule} from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { HeroesComponent } from './spa/componentes/heroes/heroes.component';
@@ -37,7 +38,9 @@ import { InputCompComponent } from './input-comp/input-comp.component';
 import {CarrosComponent} from './carros/carros.component';
 import { MascotasComponent } from './mascotas/mascotas.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
-
+import { CuentaComponent } from './cuenta/cuenta.component';
+import { NumericoComponent } from './numerico/numerico.component';
+import { SelectComponent } from './select/select.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,9 +53,12 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
     PersonaArrayComponent,
     CartaComponent,
     CarrosComponent,
-    InputCompComponent,
     MascotasComponent,
     ToolbarComponent,
+    CuentaComponent,
+    NumericoComponent,
+    SelectComponent
+    InputCompComponent,
   ],
   
   imports: [
@@ -69,7 +75,9 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
     MatIconModule,
     MatGridListModule,
     BrowserAnimationsModule,
-    MatDialogModule
+    MatDialogModule,
+    MatMenuModule,
+    MatSelectModule
   ],
   exports: [
     BrowserModule,
@@ -82,7 +90,9 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
     MatButtonModule,
     MatToolbarModule,
     MatIconModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatMenuModule,
+    MatSelectModule
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
