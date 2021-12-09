@@ -1,19 +1,109 @@
-<div class="card-columns" >
+<div>
+  <div>
+    <form [formGroup]="mascotasGroup" (ngSubmit)="showMascota()">
+      <mat-card class="carta-input" style="background-color:cadetblue;">
+        <table class="example-full-width" cellspacing="0">
+          <tr>
+            <td>
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Nombre</mat-label>
+                <input formControlName="nombre" matInput>
+              </mat-form-field>
+            </td>
+            <td>
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Animal</mat-label>
+                <input formControlName="animal" matInput>
+              </mat-form-field>
+            </td>
+          </tr>
+        </table>
 
-    <mat-card style="background-color: cornflowerblue;" class="example-card" *ngFor="let pets of mascotas">
-        <mat-card-title-group>
-          <mat-card-title>Nombre: {{pets.nombre}}</mat-card-title>
-        </mat-card-title-group>
-        <img class="card-img-top img-fluid" [src]="pets.img" [alt]='pets.nombre' >
-        <mat-card-content>
-            <strong>{{pets.animal}}</strong> 
-            <br>
-          Edad: {{pets.edad}}
-          <br>
-          Raza: {{pets.raza}}
-          <br>
-
-        </mat-card-content> 
+        <p>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Raza</mat-label>
+            <textarea matInput formControlName="raza"></textarea>
+          </mat-form-field>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Edad</mat-label>
+            <textarea formControlName="edad" matInput></textarea>
+          </mat-form-field>
+        </p>
+        <button mat-mini-fab color="primary">
+          <mat-icon>spellcheck</mat-icon>
+        </button>
       </mat-card>
+    </form>
+  </div>
 
+  <div class="card-columns">
+
+    <mat-card style="background-color: cornflowerblue;" class="example-card" *ngFor="let pet of mascotas">
+      <mat-card-title-group>
+        <mat-card-title>Nombre: {{pet.nombre}}</mat-card-title>
+      </mat-card-title-group>
+
+
+      <mat-card-content>
+        <strong>{{pet.animal}}</strong>
+        <br>
+        Edad: {{pet.edad}}
+        <br>
+        Raza: {{pet.raza}}
+        <br>
+
+      </mat-card-content>
+
+      <mat-icon-button color=warn (click)="eliminar(pet.id)" class="btn float-end" mat-mini-fab>
+        <mat-icon>delete</mat-icon>
+      </mat-icon-button>
+
+      <button color=primary (click)="editarMascotaForm(pet)" class="btn float-end" mat-mini-fab >
+        <mat-icon>edit</mat-icon>
+      </button>
+
+    </mat-card>
+  </div>
+
+  <div *ngIf="ind">
+    <form [formGroup]="editarForm">
+      <mat-card class="carta-input" style="background-color:cadetblue;">
+        <table class="example-full-width" cellspacing="0">
+          <tr>
+            <td>
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Nombre</mat-label>
+                <input formControlName="nombre" matInput>
+              </mat-form-field>
+            </td>
+            <td>
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Animal</mat-label>
+                <input formControlName="animal" matInput>
+              </mat-form-field>
+            </td>
+          </tr>
+        </table>
+
+        <p>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Raza</mat-label>
+            <textarea matInput formControlName="raza"></textarea>
+          </mat-form-field>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Edad</mat-label>
+            <textarea formControlName="edad" matInput></textarea>
+          </mat-form-field>
+        </p>
+        <button class="btn float-end" mat-mini-fab (click)="editar()" color="primary">
+          <mat-icon>save</mat-icon> 
+        </button>
+
+        <mat-icon-button color=warn (click)="ind=false" class="btn float-end" mat-mini-fab>
+          <mat-icon>delete</mat-icon>
+        </mat-icon-button>
+
+      </mat-card>
+    </form>
+  </div>
 </div>

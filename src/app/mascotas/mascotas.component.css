@@ -15,3 +15,14 @@
     box-shadow: 2px 2px 5px #ccc;
     background: #fff;    
 }
+
+.carta-input{
+  border: black 2px solid;
+  margin: 10px;
+    padding: 5px;
+    display: inline-block;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px #ccc;
+    background: #fff; 
+}
+

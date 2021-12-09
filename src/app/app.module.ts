@@ -23,7 +23,7 @@ import { APP_ROUTING } from './app.routes';
 
 //SERVICIOS
 import { HeroesService } from './servicios/heroes.service'
-import { MascotasService } from './servicios/mascotas.service'
+import { MascotasService } from './mascotas/mascotas.service'
 
 
 import {MatIconModule} from '@angular/material/icon';
@@ -37,6 +37,7 @@ import { InputCompComponent } from './input-comp/input-comp.component';
 import {CarrosComponent} from './carros/carros.component';
 import { MascotasComponent } from './mascotas/mascotas.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,7 +52,7 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
     CarrosComponent,
     InputCompComponent,
     MascotasComponent,
-    ToolbarComponent
+    ToolbarComponent,
   ],
   
   imports: [
