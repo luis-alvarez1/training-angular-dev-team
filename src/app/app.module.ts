@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { Prueba1Component } from './prueba1/prueba1.component';
 import { HomeComponent } from './spa/componentes/home/home.component';
 import { SpaComponent } from './spa/spa.component';
-import { NavbarComponent } from './spa/componentes/navbar/navbar.component';
 import { MatSliderModule } from '@angular/material/slider';
 import {MatCardModule} from '@angular/material/card';
 import {MatInputModule} from '@angular/material/input';
@@ -47,7 +46,6 @@ import { SelectComponent } from './select/select.component';
     FormularioComponent,
     Prueba1Component,
     SpaComponent,
-    NavbarComponent,
     HomeComponent,
     HeroesComponent,
     PersonaArrayComponent,
@@ -57,7 +55,7 @@ import { SelectComponent } from './select/select.component';
     ToolbarComponent,
     CuentaComponent,
     NumericoComponent,
-    SelectComponent
+    SelectComponent,
     InputCompComponent,
   ],
   
