@@ -1,0 +1,50 @@
+<app-admin-pacientes (formularioEmmiter)="getCreatedValue($event)"></app-admin-pacientes>
+<div class="paciente">
+    <div>
+        <mat-card style="background-color: greenyellow; height: 200px; width: 200px; margin: 10px" class="pacientes"
+            *ngFor="let paciente of pacientes">
+            <mat-card-title-group>
+                <mat-card-title> Nombre: {{paciente.nombre}}</mat-card-title>
+            </mat-card-title-group>
+            <div>
+                <mat-list-item>Edad: {{paciente.edad}}</mat-list-item>
+            </div>
+            <div>
+                <mat-list-item>Id: {{paciente.id}}</mat-list-item>
+            </div>
+            <div>
+                <mat-list-item>Peso: {{paciente.peso}}</mat-list-item>
+            </div>
+            <button mat-button style="background-color: aliceblue; margin: 5px;" type="button" name="button"
+                (click)="eliminarPacientes(paciente.id)">Borrar</button>
+            <button mat-button style="background-color: aliceblue; margin: 5px;" type="button" name="button"
+                (click)="showEditarPacienteForm(paciente)">Editar</button>
+        </mat-card>
+    </div>
+    <div *ngIf="showEditar" style="margin-left: 50px;">
+        <mat-card>
+            <form [formGroup]="paciente">
+                <div class="form-group">
+                    <mat-card-title>Editar informacion del paciente</mat-card-title>
+                    <mat-form-field>
+                        <input matInput formControlName="nombre" type="text" placeholder="Nombre completo">
+                    </mat-form-field>
+                </div>
+                <div class="form-group">
+                    <mat-form-field>
+                        <input matInput formControlName="edad" type="number" placeholder="Edad">
+                    </mat-form-field>
+                </div>
+                <div class="form-group">
+                    <mat-form-field>
+                        <input matInput formControlName="peso" type="number" placeholder="Peso">
+                    </mat-form-field>
+                </div>
+                <button mat-button style="background-color: blue; margin: 5px;" type="button"
+                    [disabled]="!paciente.valid" (click)=" editarPaciente()">Editar</button>
+                <button mat-button style="background-color: blue; margin: 5px;" type="button"
+                    [disabled]="!paciente.valid" (click)=" showEditar = false">Cancelar</button>
+            </form>
+        </mat-card>
+    </div>
+</div>

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Personas } from './models/Personas';
 import Swal from 'sweetalert2';
+import { Paciente } from './admin-pacientes/pacientes.service';
 
 @Component({
   selector: 'app-root',
@@ -15,6 +16,7 @@ export class AppComponent {
 
   comida: string[] = ['Hamburguesa','Pizza','Tacos','Pastas'];
   selected: any;
+
 
   constructor(){
     this.listadoPersonas =  [
@@ -34,5 +36,9 @@ export class AppComponent {
 
   onValorSelected(valSelected: string){
     this.selected = valSelected;
+  }
+
+  getCreatedPaciente(newPaciente: Paciente){
+    console.log(newPaciente);
   }
 }

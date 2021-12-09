@@ -1,0 +1,32 @@
+<p>
+    <mat-toolbar style="background-color: blue;">
+        <span>Administracion Pacientes</span>
+    </mat-toolbar>
+</p>
+
+<mat-card>
+    <form [formGroup]="paciente">
+        <div class="form-group">
+            <mat-form-field>
+                <input matInput formControlName="nombre" type="text" placeholder="Nombre completo">
+            </mat-form-field>
+        </div>
+        <div class="form-group">
+            <mat-form-field>
+                <input matInput formControlName="edad" type="number" placeholder="Edad">
+            </mat-form-field>
+        </div>
+        <div class="form-group">
+            <mat-form-field>
+                <input matInput formControlName="id" type="text" placeholder="Id">
+            </mat-form-field>
+        </div>
+        <div class="form-group">
+            <mat-form-field>
+                <input matInput formControlName="peso" type="number" placeholder="Peso">
+            </mat-form-field>
+        </div>
+        <button mat-button style="background-color: blue; margin: 5px;" type="button" [disabled]="!paciente.valid"
+            (click)="onClick()">Crear</button>
+    </form>
+</mat-card>
