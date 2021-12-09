@@ -40,6 +40,9 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 import { CuentaComponent } from './cuenta/cuenta.component';
 import { NumericoComponent } from './numerico/numerico.component';
 import { SelectComponent } from './select/select.component';
+import { AdminPacientesComponent } from './admin-pacientes/admin-pacientes.component';
+import { ListaPacientesComponent } from './lista-pacientes/lista-pacientes.component';
+import { PacientesService } from './admin-pacientes/pacientes.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -57,6 +60,8 @@ import { SelectComponent } from './select/select.component';
     NumericoComponent,
     SelectComponent,
     InputCompComponent,
+    ListaPacientesComponent,
+    AdminPacientesComponent,
   ],
   
   imports: [
@@ -95,7 +100,7 @@ import { SelectComponent } from './select/select.component';
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
   ],
-    providers: [HeroesService,MascotasService],
+    providers: [HeroesService,MascotasService,PacientesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { 
