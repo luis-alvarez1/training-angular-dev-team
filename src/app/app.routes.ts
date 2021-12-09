@@ -1,10 +1,11 @@
 import { RouterModule, Routes } from '@angular/router';
-import { HeroesComponent } from './spa/componentes/heroes/heroes.component';
+import { MascotasComponent } from './mascotas/mascotas.component';
 import { HomeComponent } from './spa/componentes/home/home.component';
+
 
 const APP_ROUTES: Routes = [
     { path: 'home', component: HomeComponent},
-    { path: 'heroes', component: HeroesComponent},
+    { path: 'mascotas', component: MascotasComponent},
     { path: '**', pathMatch: 'full', redirectTo: 'home'}
 ];
 
