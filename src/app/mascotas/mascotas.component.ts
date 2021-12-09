@@ -43,7 +43,7 @@ export class MascotasComponent implements OnInit {
     this.mascotas = this._mascotasService.getMascotas();
   }
 
-  eliminar(id: string){
+  eliminar(id: number){
     this._mascotasService.deleteMascota(id)
     this.mascotas = this._mascotasService.getMascotas();
   }

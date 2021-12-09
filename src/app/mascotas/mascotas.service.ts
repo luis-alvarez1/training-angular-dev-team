@@ -1,11 +1,12 @@
 import { Injectable } from "@angular/core";
 
+
 export interface Mascota{
   nombre:string;
   animal: string;
   raza: string;
   edad: string;
-  id: string;
+  id: number;
 };
 
 @Injectable()
@@ -13,25 +14,31 @@ export class MascotasService {
 
     private mascotas:Mascota[] = [];
 
+  private contMascota = 0;
+
   constructor() {
     
   }
 
-  deleteMascota(id: string){
-    this.mascotas=this.mascotas.filter((p)=> p.id !== id)
+  deleteMascota(id: number){
+    this.mascotas=this.mascotas.filter((p)=> p.id !== id);
   }
 
   editarMascota(pet: Mascota){
-    this.mascotas=this.mascotas.filter((p)=> p.id !== pet.id)
-    this.mascotas.push(pet)
+    console.log(pet);
+    this.mascotas=this.mascotas.filter((p)=> p.id !== pet.id);
+    this.mascotas.push(pet);
   }
 
+
   addMascotas(pet: Mascota){
-    this.mascotas.push(pet)  
+    this.contMascota += 1;
+    pet.id = this.contMascota;
+    this.mascotas.push(pet)  ;
   }
 
   getMascotas(): Mascota[] {
-    return this.mascotas
+    return this.mascotas;
   }
 }
 
