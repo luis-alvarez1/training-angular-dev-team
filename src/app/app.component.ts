@@ -14,6 +14,12 @@ export class AppComponent {
   listadoPersonas: Personas[]; 
   listadoDatos: string[] = ["Nombre", "Apellido", "Sexo", "Edad"];
 
+  nuevoNumero: number = 0;
+
+  showNumero(newNumeroEvent: number){
+    this.nuevoNumero = newNumeroEvent;
+  }
+
   comida: string[] = ['Hamburguesa','Pizza','Tacos','Pastas'];
   selected: any;
 

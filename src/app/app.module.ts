@@ -35,6 +35,7 @@ import { InputCompComponent } from './input-comp/input-comp.component';
 
 import {CarrosComponent} from './carros/carros.component';
 import { CuentaComponent } from './cuenta/cuenta.component';
+import { NumericoComponent } from './numerico/numerico.component';
 import { SelectComponent } from './select/select.component';
 import { AdminPacientesComponent } from './admin-pacientes/admin-pacientes.component';
 import { ListaPacientesComponent } from './lista-pacientes/lista-pacientes.component';
@@ -56,6 +57,7 @@ import { PacientesService } from './admin-pacientes/pacientes.service';
     SelectComponent,
     AdminPacientesComponent,
     ListaPacientesComponent
+    NumericoComponent,
   ],
   
   imports: [
