@@ -1,0 +1,54 @@
+<p>
+    <mat-toolbar style="background-color: blueviolet; color: white;">
+        <span>Formulario viajero</span>
+    </mat-toolbar>
+</p>
+
+<mat-card style="margin: 20px 200px; height: 1000px; background-color: cornsilk;">
+    <form>
+        <h1 class="label"><strong>
+            {{labelTitle}}
+        </strong></h1>
+
+        <div class="input">
+            <app-select [comida]="configGenero.controls.genero.value" [label]="configGenero.controls.labelGenero.value"
+                (valSelected)="genero($event)"></app-select>
+        </div>
+        <div class="input">
+            <app-select [comida]="configColorFav.controls.colorFav.value"
+                [label]="configColorFav.controls.labelColor.value" (valSelected)="color($event)"></app-select>
+        </div>
+        <div class="input">
+            <app-select [comida]="configDestinoFav.controls.destinoFav.value"
+                [label]="configDestinoFav.controls.labelDestinoFav.value" (valSelected)="destinoFav($event)">
+            </app-select>
+        </div>
+        <div class="input">
+            <app-select [comida]="configCiudadResidencia.controls.ciudadResidencia.value"
+                [label]="configCiudadResidencia.controls.labelCiudad.value" (valSelected)="ciudadResidencia($event)">
+            </app-select>
+        </div>
+        <div>
+            <button mat-button type="button" style="background-color: blueviolet; color: white;" (click)="onClick()"> Subir</button>
+        </div>
+
+    </form>
+
+</mat-card>
+
+<mat-card style="margin: 20px 200px; height: 500px; background-color: blue;" *ngIf="flag">
+    <div>
+        <div>
+            {{this.configGenero.controls.valorGenero.value}}
+        </div>
+        <div>
+            {{this.configColorFav.controls.valorColor.value}}
+        </div>
+        <div>
+            {{this.configDestinoFav.controls.valorDestino.value}}
+        </div>
+        <div>
+            {{this.configCiudadResidencia.controls.valorCiudad.value}}
+        </div>
+    </div>
+</mat-card>
