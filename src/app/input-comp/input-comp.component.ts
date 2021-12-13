@@ -19,7 +19,6 @@ export class InputCompComponent implements OnInit {
   public form = new FormGroup({
     emailFormControl : new FormControl('',[
       Validators.required,
-      Validators.email,
       Validators.maxLength(this.max),
       Validators.minLength(this.min),
     ])
