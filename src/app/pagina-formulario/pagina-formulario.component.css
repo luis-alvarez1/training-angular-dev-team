@@ -1,9 +1,21 @@
 .input{
     border: 1px blueviolet solid;
     padding: 15px;
+    justify-content: left;
+}
+
+.select{
+    border: 1px blueviolet solid;
+    padding: 15px;
 }
 
 .label{
-    text-align: center
-    ;
+    text-align: center;
+}
+
+.label2{
+    text-align: center;
+    color: white;
+    background-color: blueviolet;
+    
 }

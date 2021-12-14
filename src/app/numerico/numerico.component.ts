@@ -8,7 +8,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class NumericoComponent implements OnInit {
   @Output() newNumeroEvent: EventEmitter<number> = new EventEmitter<number>();
-  
+  @Input() label: string = '';
   @Input() min: number = 0;
   @Input() max: number = 100;
 

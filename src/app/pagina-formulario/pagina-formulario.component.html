@@ -7,48 +7,89 @@
 <mat-card style="margin: 20px 200px; height: 1000px; background-color: cornsilk;">
     <form>
         <h1 class="label"><strong>
-            {{labelTitle}}
-        </strong></h1>
+                {{labelTitle}}
+            </strong></h1>
 
         <div class="input">
+            <app-input-comp [etiquita]="configNombre.controls.nombre.value"
+                [holder]="configNombre.controls.nombre.value" [min]="0" [max]="100" (correo)="nombre($event)">
+            </app-input-comp>
+        </div>
+        <div class="input">
+            <app-input-comp [etiquita]="configApellido.controls.apellido.value"
+                [holder]="configApellido.controls.apellido.value" [min]="0" [max]="100" (correo)="apellido($event)">
+            </app-input-comp>
+        </div>
+        <div class="input">
+            <app-numerico [label]="configEdad.controls.edad.value" [min]="0" [max]="100"
+                (newNumeroEvent)="edad($event)"></app-numerico>
+        </div>
+        <div class="select">
             <app-select [comida]="configGenero.controls.genero.value" [label]="configGenero.controls.labelGenero.value"
                 (valSelected)="genero($event)"></app-select>
         </div>
-        <div class="input">
+        <div class="select">
             <app-select [comida]="configColorFav.controls.colorFav.value"
                 [label]="configColorFav.controls.labelColor.value" (valSelected)="color($event)"></app-select>
         </div>
-        <div class="input">
+        <div class="select">
             <app-select [comida]="configDestinoFav.controls.destinoFav.value"
                 [label]="configDestinoFav.controls.labelDestinoFav.value" (valSelected)="destinoFav($event)">
             </app-select>
         </div>
-        <div class="input">
+        <div class="select">
             <app-select [comida]="configCiudadResidencia.controls.ciudadResidencia.value"
                 [label]="configCiudadResidencia.controls.labelCiudad.value" (valSelected)="ciudadResidencia($event)">
             </app-select>
         </div>
+        <!-- <div class="input">
+            <app-numerico [label]="configSueldo.controls.saldo.value" [min]="1000000"[max]="10600000" (newNumeroEvent)="sueldo($event)"></app-numerico>
+        </div> -->
+
         <div>
-            <button mat-button type="button" style="background-color: blueviolet; color: white;" (click)="onClick()"> Subir</button>
+            <button mat-button type="button" style="background-color: blueviolet; color: white; margin: 10px;" (click)="onClick()">
+                Subir</button>
         </div>
 
     </form>
 
 </mat-card>
 
-<mat-card style="margin: 20px 200px; height: 500px; background-color: blue;" *ngIf="flag">
+<mat-card style="margin: 20px 450px; height: 800px; background-color: cornsilk;" *ngIf="flag">
+
+    <p>
+        <mat-toolbar class="label2">
+            <span>{{labelTitle2}}</span>
+        </mat-toolbar>
+    </p>
     <div>
         <div>
-            {{this.configGenero.controls.valorGenero.value}}
+            <h2><strong>{{configNombre.controls.nombre.value}}</strong></h2>
+            <h2>{{configNombre.controls.valorNombre.value}}</h2>
         </div>
         <div>
-            {{this.configColorFav.controls.valorColor.value}}
+            <h2><strong>{{configApellido.controls.apellido.value}}</strong></h2>
+            <h2>{{configApellido.controls.valorApellido.value}}</h2>
         </div>
         <div>
-            {{this.configDestinoFav.controls.valorDestino.value}}
+            <h2><strong>{{configEdad.controls.edad.value}}</strong></h2>
+            <h2>{{configEdad.controls.valorEdad.value}}</h2>
         </div>
         <div>
-            {{this.configCiudadResidencia.controls.valorCiudad.value}}
+            <h2><strong>{{configGenero.controls.labelGenero.value}}</strong></h2>
+            <h2>{{this.configGenero.controls.valorGenero.value}}</h2>
+        </div>
+        <div>
+            <h2><strong>{{configColorFav.controls.labelColor.value}}</strong></h2>
+            <h2>{{this.configColorFav.controls.valorColor.value}}</h2>
+        </div>
+        <div>
+            <h2><strong>{{configDestinoFav.controls.labelDestinoFav.value}}</strong></h2>
+            <h2>{{this.configDestinoFav.controls.valorDestino.value}}</h2>
+        </div>
+        <div>
+            <h2><strong>{{configCiudadResidencia.controls.labelCiudad.value}}</strong></h2>
+            <h2>{{this.configCiudadResidencia.controls.valorCiudad.value}}</h2>
         </div>
     </div>
 </mat-card>
