@@ -1,12 +1,19 @@
-<div class="body">
-  <mat-card class="persona-array" style="text-align: center">
+<div >
+  
 
     <form [formGroup]="form" class="example-form" (ngSubmit)="mostrar()">
-      <h1>
+      <!-- <h1>
         <mat-card-title style="text-align: center">{{
           etiquita
         }}</mat-card-title>
-      </h1>
+      </h1> -->
+       
+      <mat-label>
+        <h3><strong>
+        {{etiquita}}
+      </strong>
+      </h3>
+      </mat-label>
 
       <mat-form-field
         
@@ -17,7 +24,7 @@
           type="text"
           matInput
           formControlName="emailFormControl"
-          placeholder="Info"
+          [placeholder]="holder"
           [minlength]="min"
           [maxlength]="max"
         />
@@ -38,15 +45,15 @@
       </mat-form-field>
       <br />
     
-      <button
+       <button
         [disabled]="form.controls.emailFormControl.invalid"
         mat-raised-button
         color="primary"
         type="submit"
       >
         Verificar
-      </button>
+      </button> 
     </form>
-  </mat-card>
+
 </div>
 
