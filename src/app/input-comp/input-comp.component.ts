@@ -10,7 +10,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class InputCompComponent implements OnInit {
   @Input() etiquita: string = '';
   @Input() imagen: string = '';
-
+  @Input() holder: string = '';
   @Input() min: number = 0;
   @Input() max: number = 100;
 
@@ -31,9 +31,6 @@ export class InputCompComponent implements OnInit {
   ngOnInit(): void {}
 
   mostrar() {
-    
     this.correo.emit(this.form.controls.emailFormControl.value)
-    this.form.reset()
-  
   }
 }
