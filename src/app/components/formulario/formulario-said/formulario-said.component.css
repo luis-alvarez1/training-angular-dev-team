@@ -1,0 +1,22 @@
+
+.form-prueba form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content:center;
+    grid-template-rows: 170px;
+    gap: 1em;
+}
+
+.form-prueba > * {
+    padding: 3em 3em;
+}
+
+.input{
+    border: 1px rgb(226, 95, 43) solid;
+    border-radius: 30px;
+}
+
+.select{
+    border: 1px rgb(226, 95, 43) solid;
+    border-radius: 30px;
+}

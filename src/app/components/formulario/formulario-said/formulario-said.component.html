@@ -1,0 +1,83 @@
+<mat-card style="text-align: center;background-color: rgb(231, 175, 136); max-width: 450px; " class="form-prueba">
+
+    <strong style="font-size: 15px;">{{etiqueta}}</strong>
+    <form>
+
+        <app-input-comp class="input" [etiquita]="nombre.controls.labelNombre.value" [min]='5' [max]="100"
+            (correo)="mostrarNombre($event)">
+        </app-input-comp>
+
+
+
+        <app-input-comp class="input" [etiquita]="apellido.controls.labelApellido.value" [min]='0' [max]="100"
+            (correo)="mostrarApellido($event)">
+        </app-input-comp>
+
+
+
+        <app-numerico class="input" [label]="edad.controls.labelEdad.value" [min]="0" [max]="100"
+            (newNumeroEvent)="mostrarEdad($event)"></app-numerico>
+
+
+
+        <app-input-comp class="input" [etiquita]="origen.controls.labelOrigen.value" [min]='0' [max]="100"
+            (correo)="mostrarOrigen($event)">
+        </app-input-comp>
+
+
+
+        <app-select class="select" [comida]="genero.controls.generos.value" [label]="genero.controls.labelGenero.value"
+            (valSelected)="mostrarGenero($event)"></app-select>
+
+
+        <!-- <div>
+                <app-select [comida]="estado.controls.estadoCivil.value" [label]="estado.controls.labelEstado.value"
+                    (valSelected)="mostrarEstado($event)"></app-select>
+            </div> -->
+
+
+        <app-select class="select"  [comida]="area.controls.materias.value" [label]="area.controls.labelMateria.value"
+            (valSelected)="mostrarMateria($event)"></app-select>
+
+
+
+        <button mat-button type="button" style="background-color: blueviolet; color: white; margin: 10px;"
+            (click)="showInfo()">
+            GUARDAR</button>
+
+    </form>
+</mat-card>
+
+<mat-card style="max-width: 450px; background-color: cornsilk;" *ngIf="ind">
+
+    <div>
+        <div>
+            <h2><strong>{{nombre.controls.labelNombre.value}}</strong></h2>
+            <h2>{{nombre.controls.name.value}}</h2>
+        </div>
+        <div>
+            <h2><strong>{{apellido.controls.labelApellido.value}}</strong></h2>
+            <h2>{{apellido.controls.lastname.value}}</h2>
+        </div>
+        <div>
+            <h2><strong>{{edad.controls.labelEdad.value}}</strong></h2>
+            <h2>{{edad.controls.age.value}}</h2>
+        </div>
+        <div>
+            <h2><strong>{{genero.controls.labelGenero.value}}</strong></h2>
+            <h2>{{this.genero.controls.gender.value}}</h2>
+        </div>
+        <div>
+            <h2><strong>{{area.controls.labelMateria.value}}</strong></h2>
+            <h2>{{this.area.controls.materia.value}}</h2>
+        </div>
+        <div>
+            <h2><strong>{{origen.controls.labelOrigen.value}}</strong></h2>
+            <h2>{{this.origen.controls.birthplace.value}}</h2>
+        </div>
+        <!-- <div>
+            <h2><strong>{{estado.controls.labelSocial.value}}</strong></h2>
+            <h2>{{this.estado.controls.civil.value}}</h2>
+        </div> -->
+    </div>
+</mat-card>
