@@ -1,1 +1,29 @@
-<p>pdf-said works!</p>
+<div id="htmlData">
+  <mat-card class="example-card">
+    <div class="container">
+      <div class="row">
+        <div>
+          <mat-card-title class="title">{{titulo}}</mat-card-title>
+        </div>
+        <div class="fechas">
+          <mat-card-subtitle class='fecha'>Lugar y fecha de expedición:</mat-card-subtitle>
+          <mat-card-subtitle class='numero'>{{numero}}</mat-card-subtitle>
+        </div>
+        <h4 class="lugar-expedicion">{{fecha}}</h4>
+        <h4 class="enviador">{{enviador}}</h4>
+        <mat-card-subtitle class='numero2'>Cantidad en letras</mat-card-subtitle>
+        <div class="cuadrado" style='margin-bottom:30px'></div>
+        <h4 class="concepto">Por concepto de renta de casa habitación.</h4>
+        <div class="firma">
+          <h4 class="firma2">_____________________________________</h4>
+          <h4>{{firma}}</h4>
+        </div>
+      </div>
+    </div>
+  </mat-card>
+
+</div>
+<br>
+<div class="botn">
+  <button class="btn col-lg-4 btn-success  " (click)="downloadPDF()"><mat-icon>download</mat-icon><br>DESCARGAR</button>
+</div>
