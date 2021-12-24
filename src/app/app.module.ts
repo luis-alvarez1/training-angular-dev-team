@@ -44,6 +44,7 @@ import { AdminPacientesComponent } from './admin-pacientes/admin-pacientes.compo
 import { ListaPacientesComponent } from './lista-pacientes/lista-pacientes.component';
 import { PacientesService } from './admin-pacientes/pacientes.service';
 import { PaginaFormularioComponent } from './pagina-formulario/pagina-formulario.component';
+import { FormularioSaidComponent } from './components/formulario/formulario-said/formulario-said.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -64,6 +65,7 @@ import { PaginaFormularioComponent } from './pagina-formulario/pagina-formulario
     ListaPacientesComponent,
     AdminPacientesComponent,
     PaginaFormularioComponent,
+    FormularioSaidComponent,
   ],
   
   imports: [

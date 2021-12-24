@@ -1,4 +1,5 @@
 import { RouterModule, Routes } from '@angular/router';
+import { FormularioSaidComponent } from './components/formulario/formulario-said/formulario-said.component';
 import { ListaPacientesComponent } from './lista-pacientes/lista-pacientes.component';
 import { MascotasComponent } from './mascotas/mascotas.component';
 import { PaginaFormularioComponent } from './pagina-formulario/pagina-formulario.component';
@@ -10,6 +11,7 @@ const APP_ROUTES: Routes = [
     { path: 'mascotas', component: MascotasComponent},
     {path: 'pacientes', component: ListaPacientesComponent},
     {path: 'formulario', component: PaginaFormularioComponent},
+    {path: 'formularioSaid', component: FormularioSaidComponent},
     { path: '**', pathMatch: 'full', redirectTo: 'home'}
     
     
