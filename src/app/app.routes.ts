@@ -4,6 +4,7 @@ import { ListaPacientesComponent } from './lista-pacientes/lista-pacientes.compo
 import { MascotasComponent } from './mascotas/mascotas.component';
 import { PaginaFormularioComponent } from './pagina-formulario/pagina-formulario.component';
 import { HomeComponent } from './spa/componentes/home/home.component';
+import { PdfGiancarloComponent } from './pdf-giancarlo/pdf-giancarlo.component';
 
 
 const APP_ROUTES: Routes = [
@@ -11,6 +12,7 @@ const APP_ROUTES: Routes = [
     { path: 'mascotas', component: MascotasComponent},
     {path: 'pacientes', component: ListaPacientesComponent},
     {path: 'formulario', component: PaginaFormularioComponent},
+    {path: 'reciboPago', component: PdfGiancarloComponent},
     {path: 'formularioSaid', component: FormularioSaidComponent},
     { path: '**', pathMatch: 'full', redirectTo: 'home'}
     
