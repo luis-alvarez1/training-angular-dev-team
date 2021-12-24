@@ -6,8 +6,6 @@ import { MascotasComponent } from './mascotas/mascotas.component';
 import { PaginaFormularioComponent } from './pagina-formulario/pagina-formulario.component';
 import { HomeComponent } from './spa/componentes/home/home.component';
 
-
-
 const APP_ROUTES: Routes = [
     { path: 'home', component: HomeComponent},
     { path: 'mascotas', component: MascotasComponent},
@@ -15,8 +13,7 @@ const APP_ROUTES: Routes = [
     {path: 'formulario', component: PaginaFormularioComponent},
     {path: 'formularioSaid', component: FormularioSaidComponent},
     {path: 'reciboSaid', component: PdfSaidComponent},
-    { path: '**', pathMatch: 'full', redirectTo: 'home'}
-    
+    { path: '**', pathMatch: 'full', redirectTo: 'home'}   
     
 ];
 

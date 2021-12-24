@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { jsPDF } from 'jspdf';
 import html2canvas from 'html2canvas';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 
 
@@ -12,10 +13,18 @@ import html2canvas from 'html2canvas';
 export class PdfSaidComponent implements OnInit {
 
   @Input() titulo: string = 'RECIBO DE ARRENDAMIENTO';
-  @Input() fecha: string = 'En_______________a____de________del______';
-  @Input() numero: string = 'N°_________';
-  @Input() enviador: string = 'Recibí de_________________________________________ la cantidad de $__________________________.';
   @Input() firma: string = 'Nombre y firma de quien recibe'
+
+  formulario = new FormGroup({
+    numero: new FormControl('', Validators.required),
+    lugar: new FormControl(undefined, Validators.required),
+    día: new FormControl('', Validators.required),
+    mes: new FormControl(undefined, Validators.required),
+    año: new FormControl(undefined, Validators.required),
+    propietario: new FormControl(undefined, Validators.required),
+    cantidad: new FormControl(undefined, Validators.required),
+    cantidadLetras: new FormControl(undefined, Validators.required)
+  })
 
   constructor() {
     this.downloadPDF();
