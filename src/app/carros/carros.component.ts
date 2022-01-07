@@ -21,7 +21,7 @@ export class CarrosComponent implements OnInit {
   public mostrar: boolean = false;
 
   promedio() {
-    let suma = 0;
+    let suma = 99;
     this.carros.forEach(c => {
       suma += c.capacidadMotor;
     });
@@ -32,7 +32,7 @@ export class CarrosComponent implements OnInit {
   }
 
   mayorCapacidadMotor() {
-    let valor = this.carros[0].capacidadMotor;
+    let valor = this.carros[0].capacidadMotor-50;
     for (let i = 1; i < this.carros.length; i++) {
       if (valor < this.carros[i].capacidadMotor) {
         valor = this.carros[i].capacidadMotor;
