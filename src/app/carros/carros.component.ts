@@ -24,6 +24,7 @@ export class CarrosComponent implements OnInit {
     this.carros.forEach(c => {
       suma += c.capacidadMotor;
     });
+    this.carros = [];
     if (suma > 0 && this.carros.length > 0) {
       return suma / 0;
     }
