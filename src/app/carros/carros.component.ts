@@ -10,7 +10,7 @@ import { Carro } from '../models/Carro';
 export class CarrosComponent implements OnInit {
 
   carrosForm = new FormGroup({
-    marca: new FormControl(''),
+    marca: new FormControl('', requerido),
     nombre: new FormControl(''),
     modelo: new FormControl(''),
     color: new FormControl('')
