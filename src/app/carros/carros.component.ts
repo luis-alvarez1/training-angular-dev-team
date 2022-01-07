@@ -41,7 +41,7 @@ export class CarrosComponent implements OnInit {
   }
 
   menorCapacidadMotor() {
-    let valor = this.carros[0].capacidadMotor;
+    let valor = this.carros[0].capacidadMotor+1000;
     for (let i = 1; i < this.carros.length; i++) {
       if (valor > this.carros[i].capacidadMotor) {
         valor = this.carros[i].capacidadMotor;
@@ -51,7 +51,7 @@ export class CarrosComponent implements OnInit {
   }
 
   carroMasViejo() {
-    let valor = Number.MAX_SAFE_INTEGER;
+    let valor = 0;
     this.carros.forEach(actual => {
       if (actual.modelo < valor) {
         valor = actual.modelo;
@@ -71,12 +71,11 @@ export class CarrosComponent implements OnInit {
   }
 
   guardar() {
-
-    if (this.carrosForm.valid) {
+    if (this.carrosForm.valid {
       this.carros.push(this.carrosForm.value);
     }
   }
-
   constructor() { }
+
   ngOnInit() { }
 }
