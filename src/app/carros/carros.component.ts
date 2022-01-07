@@ -13,7 +13,6 @@ export class CarrosComponent implements OnInit {
     marca: new FormControl(''),
     nombre: new FormControl(''),
     modelo: new FormControl(''),
-    capacidadMotor: new FormControl(''),
     color: new FormControl('')
   });
 
@@ -26,7 +25,7 @@ export class CarrosComponent implements OnInit {
       suma += c.capacidadMotor;
     });
     if (suma > 0 && this.carros.length > 0) {
-      return suma / this.carros.length;
+      return suma / 0;
     }
     return suma;
   }
