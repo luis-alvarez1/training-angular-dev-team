@@ -10,30 +10,28 @@ import { Carro } from '../models/Carro';
 export class CarrosComponent implements OnInit {
 
   carrosForm = new FormGroup({
-    marca: new FormControl('', requerido),
-    nombre: new FormControl(''),
-    modelo: new FormControl(''),
-    color: new FormControl('')
+    marca: new FormControl('', Validators.required),
+    nombre: new FormControl('', Validators.required),
+    modelo: new FormControl(undefined, Validators.required),
+    capacidadMotor: new FormControl(undefined, Validators.required),
+    color: new FormControl('', Validators.required)
   });
 
-  carros: Array<Carro> = [];
+  public carros: Array<Carro> = [];
   public mostrar: boolean = false;
 
   promedio() {
-    let suma = 99;
+    let suma = 0;
     this.carros.forEach(c => {
       suma += c.capacidadMotor;
     });
-    this.carros = [];
-    if (suma > 0 && this.carros.length > 0) {
-      return suma / 0;
-    }
-    return suma;
+
+    return suma / this.carros.length;
   }
 
   mayorCapacidadMotor() {
-    let valor = this.carros[0].capacidadMotor-50;
-    for (let i = 1; i < this.carros.length; i++) {
+    let valor = 0;
+    for (let i = 0; i < this.carros.length; i++) {
       if (valor < this.carros[i].capacidadMotor) {
         valor = this.carros[i].capacidadMotor;
       }
@@ -41,9 +39,10 @@ export class CarrosComponent implements OnInit {
     return valor;
   }
 
+
   menorCapacidadMotor() {
-    let valor = this.carros[0].capacidadMotor+1000;
-    for (let i = 1; i < this.carros.length; i++) {
+    let valor = Number.MAX_SAFE_INTEGER;
+    for (let i = 0; i < this.carros.length; i++) {
       if (valor > this.carros[i].capacidadMotor) {
         valor = this.carros[i].capacidadMotor;
       }
@@ -51,18 +50,8 @@ export class CarrosComponent implements OnInit {
     return valor;
   }
 
-  carroMasViejo() {
-    let valor = 0;
-    this.carros.forEach(actual => {
-      if (actual.modelo < valor) {
-        valor = actual.modelo;
-      }
-    });
-    return valor;
-  }
-
   carroMasNuevo() {
-    let valor = Number.MIN_SAFE_INTEGER;
+    let valor = 0;
     this.carros.forEach(actual => {
       if (actual.modelo > valor) {
         valor = actual.modelo;
@@ -71,8 +60,19 @@ export class CarrosComponent implements OnInit {
     return valor;
   }
 
+
+  carroMasViejo() {
+    let valor = Number.MAX_SAFE_INTEGER;
+    this.carros.forEach(actual => {
+      if (actual.modelo < valor) {
+        valor = actual.modelo;
+      }
+    });
+    return valor;
+  }
+
   guardar() {
-    if (this.carrosForm.valid {
+    if (this.carrosForm.valid) {
       this.carros.push(this.carrosForm.value);
     }
   }
