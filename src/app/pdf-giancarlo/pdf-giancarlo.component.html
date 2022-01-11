@@ -1,0 +1,70 @@
+<div id="recibo">
+    <mat-card class="factura">
+        <div>
+            <table class="fecha">
+                <tr>
+                    <td>Dia</td>
+                    <td>Mes</td>
+                    <td>Año</td>
+                </tr>
+                <tr>
+                    <th>{{dia}}</th>
+                    <th>{{mes}}</th>
+                    <th>{{ano}}</th>
+                </tr>
+            </table>
+        </div>
+        <div class="titulo">
+            <h1><strong>{{title}}</strong></h1>
+        </div>
+        <div class="titulo2">
+            <h2>Numero# {{num}}</h2>
+        </div>
+        <div class="valor">
+            <h2><strong>{{pagoA}}</strong>{{nombreRecibe}}</h2>
+        </div>
+        <div class="valor2">
+            <h2>${{precioNum}}</h2>
+        </div>
+
+        <div class="pago">
+            <h2><strong>{{pagoDe}}</strong>{{nombreDa}}</h2>
+        </div>
+
+        <div class="pago">
+            <h2><strong>Valor en letras:</strong> {{precioLet}}</h2>
+        </div>
+        <div class="pago">
+            <h2><strong>Codigo: </strong> {{cod}}</h2>
+        </div>
+        <div class="line">
+            <div class="efectivo">
+                <h2><strong>{{efec}}</strong></h2>
+            </div>
+            <div class="check"></div>
+            <div class="efectivo">
+                <h2><strong>Cheque numero: </strong></h2>
+            </div>
+            <div class="cheque">{{cheque}}</div>
+            <div class="efectivo">
+                <h2><strong>Numero de cuenta: </strong></h2>
+            </div>
+            <div class="cheque">{{numCuenta}}</div>
+        </div>
+
+        <div class="ciudad">
+            <h2><strong>Ciudad: </strong></h2>
+            <h2>{{ciudad}}</h2>
+            <h2><strong>País: </strong></h2>
+            <h2>{{pais}}</h2>
+        </div>
+        <div class="aprobado">
+            <h2><strong>Aprobado por: </strong></h2>
+        </div>
+        <div class="firma">
+            <h2><strong>Firma: </strong>{{firma}}</h2>
+        </div>
+
+    </mat-card>
+</div>
+<button mat-button class="button" type="button" (click)="descargaPDF()">{{boton}}</button>

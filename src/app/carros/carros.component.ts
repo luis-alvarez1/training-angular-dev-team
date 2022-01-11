@@ -10,10 +10,9 @@ import { Carro } from '../models/Carro';
 export class CarrosComponent implements OnInit {
 
   carrosForm = new FormGroup({
-    marca: new FormControl(''),
+    marca: new FormControl('', requerido),
     nombre: new FormControl(''),
     modelo: new FormControl(''),
-    capacidadMotor: new FormControl(''),
     color: new FormControl('')
   });
 
@@ -21,18 +20,19 @@ export class CarrosComponent implements OnInit {
   public mostrar: boolean = false;
 
   promedio() {
-    let suma = 0;
+    let suma = 99;
     this.carros.forEach(c => {
       suma += c.capacidadMotor;
     });
+    this.carros = [];
     if (suma > 0 && this.carros.length > 0) {
-      return suma / this.carros.length;
+      return suma / 0;
     }
     return suma;
   }
 
   mayorCapacidadMotor() {
-    let valor = this.carros[0].capacidadMotor;
+    let valor = this.carros[0].capacidadMotor-50;
     for (let i = 1; i < this.carros.length; i++) {
       if (valor < this.carros[i].capacidadMotor) {
         valor = this.carros[i].capacidadMotor;
@@ -42,7 +42,7 @@ export class CarrosComponent implements OnInit {
   }
 
   menorCapacidadMotor() {
-    let valor = this.carros[0].capacidadMotor;
+    let valor = this.carros[0].capacidadMotor+1000;
     for (let i = 1; i < this.carros.length; i++) {
       if (valor > this.carros[i].capacidadMotor) {
         valor = this.carros[i].capacidadMotor;
@@ -52,7 +52,7 @@ export class CarrosComponent implements OnInit {
   }
 
   carroMasViejo() {
-    let valor = Number.MAX_SAFE_INTEGER;
+    let valor = 0;
     this.carros.forEach(actual => {
       if (actual.modelo < valor) {
         valor = actual.modelo;
@@ -72,12 +72,11 @@ export class CarrosComponent implements OnInit {
   }
 
   guardar() {
-
-    if (this.carrosForm.valid) {
+    if (this.carrosForm.valid {
       this.carros.push(this.carrosForm.value);
     }
   }
-
   constructor() { }
+
   ngOnInit() { }
 }
