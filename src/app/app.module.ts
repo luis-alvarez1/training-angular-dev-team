@@ -47,6 +47,9 @@ import { PaginaFormularioComponent } from './pagina-formulario/pagina-formulario
 import { FormularioSaidComponent } from './components/formulario/formulario-said/formulario-said.component';
 import { PdfSaidComponent } from './components/pdf-said/pdf-said.component';
 import { PdfGiancarloComponent } from './pdf-giancarlo/pdf-giancarlo.component';
+import { EtiquetaService } from './etiqueta/etiqueta.service';
+import { HttpClientModule } from '@angular/common/http';
+import { EtiquetaComponent } from './etiqueta/etiqueta.component';
 
 @NgModule({
   declarations: [
@@ -70,7 +73,8 @@ import { PdfGiancarloComponent } from './pdf-giancarlo/pdf-giancarlo.component';
     PaginaFormularioComponent,
     FormularioSaidComponent,
     PdfSaidComponent,
-    PdfGiancarloComponent
+    PdfGiancarloComponent,
+    EtiquetaComponent
   ],
   
   imports: [
@@ -89,7 +93,8 @@ import { PdfGiancarloComponent } from './pdf-giancarlo/pdf-giancarlo.component';
     BrowserAnimationsModule,
     MatDialogModule,
     MatMenuModule,
-    MatSelectModule
+    MatSelectModule,
+    HttpClientModule
   ],
   exports: [
     BrowserModule,
@@ -109,7 +114,7 @@ import { PdfGiancarloComponent } from './pdf-giancarlo/pdf-giancarlo.component';
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
   ],
-    providers: [HeroesService,MascotasService,PacientesService],
+    providers: [HeroesService,MascotasService,PacientesService,EtiquetaService,HttpClientModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { 
