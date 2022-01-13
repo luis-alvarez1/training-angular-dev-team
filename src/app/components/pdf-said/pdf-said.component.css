@@ -1,0 +1,95 @@
+.title{
+    text-align: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+}
+
+.example-card {
+    
+    border: 4px rgba(2, 1, 2, 0.863) solid;
+    max-width:500px;
+    margin-bottom: 8px;
+    margin: 2rem auto;
+  }
+
+.fechas{
+    padding-right: 10px;
+    margin-top: 20px;
+    
+}
+
+.fecha{ 
+    
+    font-size: small;
+    margin-bottom: 10px;
+    float: left;
+    margin-left: 4px;
+    
+ }
+
+ .numero{ 
+    float:right;
+    margin-right: 25px;
+    
+ }
+ 
+ .lugar{
+    margin-left: 3px;
+    margin-top: -10px;
+    padding-inline-end:  15px;
+    margin-bottom: 10px;
+ }
+
+ .enviador{
+     margin-left: 4px;
+     padding-right: 30px;
+    
+ }
+
+ .enviador2{
+     margin-bottom: 4px;
+ }
+
+ .numero2{
+     margin-bottom: -1px;
+ }
+
+ .cuadrado{
+    
+    margin-left: 13px;
+    border-radius: 10px;
+    border: 1px rgba(2, 1, 2, 0.863) solid;
+    height: 30px;
+    width: 450px;
+    background-color: darkgray;
+ }
+
+ .concepto{
+     margin-top: -15px;
+ }
+
+.firma{
+    text-align: center;
+}
+
+.firma2{
+    margin-bottom: -1px;
+}
+
+.botn{
+    max-width: 500px;
+    margin-left: 800px;
+}
+
+.mes{
+    float: right;
+    margin-right: 103px;
+}
+
+.letras-cantidad{
+    background-color: darkgray;
+    border-radius: 10px; 
+    margin-bottom: 25px; 
+    margin-left: 2px;
+    width: 440px;
+}
