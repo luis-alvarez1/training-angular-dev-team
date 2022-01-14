@@ -1,0 +1,19 @@
+<mat-card class="general">
+    <mat-toolbar class="toolbar">
+        <mat-icon style="color:aliceblue; text-shadow: 2px 2px 8px rgb(0, 0, 0);">label</mat-icon>
+        <h1 style="font-family:Verdana, Geneva, Tahoma, sans-serif; color: aliceblue; text-shadow:2px 2px 8px rgb(0, 0, 0) ;">Etiquetas</h1>
+    </mat-toolbar>
+    
+    <br>
+    <mat-card *ngFor='let label of eti' class="ejemplo-carta">
+        <mat-card-title-group>
+            <mat-card-title>{{label.NOMBRE}}</mat-card-title>
+        </mat-card-title-group>
+
+        <mat-card-content><strong>{{label.DESCRIPCION}}</strong>
+            <br>
+            {{label.LABEL}}
+        </mat-card-content>
+    </mat-card>
+
+</mat-card>
