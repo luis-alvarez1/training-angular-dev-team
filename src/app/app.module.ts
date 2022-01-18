@@ -23,6 +23,7 @@ import { APP_ROUTING } from './app.routes';
 //SERVICIOS
 import { HeroesService } from './servicios/heroes.service'
 import { MascotasService } from './mascotas/mascotas.service'
+import { LabelService } from './components/label/label.service';
 
 import {MatMenuModule} from '@angular/material/menu';
 import {MatSelectModule} from '@angular/material/select';
@@ -50,6 +51,7 @@ import { PdfGiancarloComponent } from './pdf-giancarlo/pdf-giancarlo.component';
 import { EtiquetaService } from './etiqueta/etiqueta.service';
 import { HttpClientModule } from '@angular/common/http';
 import { EtiquetaComponent } from './etiqueta/etiqueta.component';
+import { LabelComponent } from './components/label/label.component';
 
 @NgModule({
   declarations: [
@@ -74,7 +76,8 @@ import { EtiquetaComponent } from './etiqueta/etiqueta.component';
     FormularioSaidComponent,
     PdfSaidComponent,
     PdfGiancarloComponent,
-    EtiquetaComponent
+    EtiquetaComponent,
+    LabelComponent
   ],
   
   imports: [
@@ -114,7 +117,7 @@ import { EtiquetaComponent } from './etiqueta/etiqueta.component';
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
   ],
-    providers: [HeroesService,MascotasService,PacientesService,EtiquetaService,HttpClientModule],
+    providers: [HeroesService,MascotasService,PacientesService,LabelService,EtiquetaService,HttpClientModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { 
