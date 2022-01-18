@@ -10,17 +10,17 @@ export class EtiquetaService {
   constructor(private http: HttpClient) { }
 
   getAll(): Observable<any> {
-    return this.http.post('https://apoloniabackend.azurewebsites.net/api?query=%7B%0A%20%20etiquetas%20%7B%0A%20%20%20%20NOMBRE%0A%20%20%20%20DESCRIPCION%0A%20%20%20%20LABEL%0A%20%20%7D%0A%7D%0A', {
+    let body = {
+      query: `query {
+      etiquetas{
+       NOMBRE
+      DESCRIPCION
+       LABEL  
+      }
+     }`};
+     
+     let headers = new HttpHeaders().set("Content-Type", "application/json");
 
-      query: `
-        query{
-          etiquetas {
-            NOMBRE
-            DESCRIPCION
-            LABEL
-          }
-        }`
-    }, { headers: new HttpHeaders().set("Content-Type", "aplication/json") }
-    )
+    return this.http.post('https://apoloniabackend.azurewebsites.net/api', body, { headers: headers});
   }
 }
