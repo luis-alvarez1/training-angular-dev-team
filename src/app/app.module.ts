@@ -23,6 +23,7 @@ import { APP_ROUTING } from './app.routes';
 //SERVICIOS
 import { HeroesService } from './servicios/heroes.service'
 import { MascotasService } from './mascotas/mascotas.service'
+import { LabelService } from './components/label/label.service';
 
 import {MatMenuModule} from '@angular/material/menu';
 import {MatSelectModule} from '@angular/material/select';
@@ -47,6 +48,8 @@ import { PaginaFormularioComponent } from './pagina-formulario/pagina-formulario
 import { FormularioSaidComponent } from './components/formulario/formulario-said/formulario-said.component';
 import { PdfSaidComponent } from './components/pdf-said/pdf-said.component';
 import { PdfGiancarloComponent } from './pdf-giancarlo/pdf-giancarlo.component';
+import { LabelComponent } from './components/label/label.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -70,7 +73,8 @@ import { PdfGiancarloComponent } from './pdf-giancarlo/pdf-giancarlo.component';
     PaginaFormularioComponent,
     FormularioSaidComponent,
     PdfSaidComponent,
-    PdfGiancarloComponent
+    PdfGiancarloComponent,
+    LabelComponent
   ],
   
   imports: [
@@ -89,7 +93,8 @@ import { PdfGiancarloComponent } from './pdf-giancarlo/pdf-giancarlo.component';
     BrowserAnimationsModule,
     MatDialogModule,
     MatMenuModule,
-    MatSelectModule
+    MatSelectModule,
+    HttpClientModule
   ],
   exports: [
     BrowserModule,
@@ -109,7 +114,7 @@ import { PdfGiancarloComponent } from './pdf-giancarlo/pdf-giancarlo.component';
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
   ],
-    providers: [HeroesService,MascotasService,PacientesService],
+    providers: [HeroesService,MascotasService,PacientesService,LabelService,HttpClientModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { 

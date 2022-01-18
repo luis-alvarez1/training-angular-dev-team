@@ -1,0 +1,17 @@
+.ejemplo-carta{
+    margin: 5px;
+    padding: 5px;
+    display: inline-block;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgb(145, 143, 143);
+    background: #fff;  
+}
+
+.general{
+    background: rgb(216, 216, 216);
+    margin: 10px;
+}
+
+.toolbar{
+    background: rgb(138, 62, 161)
+}
