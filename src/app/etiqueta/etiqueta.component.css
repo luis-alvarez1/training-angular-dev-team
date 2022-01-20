@@ -1,0 +1,15 @@
+.boton{
+    background-color: red;
+    height: 50px;
+    width: 300px;
+    color: white;
+    text-align: center;
+}
+
+.card{
+    border: red 5px solid;
+    height: 150px;
+    width: 300px;
+    padding: 30px 30px;
+    margin: 20px;
+}

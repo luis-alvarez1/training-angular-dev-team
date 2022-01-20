@@ -6,6 +6,7 @@ import { MascotasComponent } from './mascotas/mascotas.component';
 import { PaginaFormularioComponent } from './pagina-formulario/pagina-formulario.component';
 import { HomeComponent } from './spa/componentes/home/home.component';
 import { PdfGiancarloComponent } from './pdf-giancarlo/pdf-giancarlo.component';
+import { EtiquetaComponent } from './etiqueta/etiqueta.component';
 import { LabelComponent } from './components/label/label.component';
 
 const APP_ROUTES: Routes = [
@@ -16,6 +17,7 @@ const APP_ROUTES: Routes = [
     {path: 'reciboPago', component: PdfGiancarloComponent},
     {path: 'formularioSaid', component: FormularioSaidComponent},
     {path: 'reciboSaid', component: PdfSaidComponent},
+    {path: 'etiqueta', component: EtiquetaComponent},
     {path: 'requestSaid', component: LabelComponent},
     { path: '**', pathMatch: 'full', redirectTo: 'home'}   
     

@@ -1,0 +1,12 @@
+<button mat-button type="button" class="boton" (click)="mostrar()">Mostrar</button>
+<mat-card *ngFor="let etiqueta of etiquetas" class="card">
+    <mat-card-title>
+        <mat-card-title>Nombre:{{etiqueta.NOMBRE}}</mat-card-title>
+    </mat-card-title>
+    <div>
+        <mat-list-item>Descripcion: {{etiqueta.DESCRIPCION}} </mat-list-item>
+    </div>
+    <div>
+        <mat-list-item>Label: {{etiqueta.LABEL}} </mat-list-item>
+    </div>
+</mat-card>
