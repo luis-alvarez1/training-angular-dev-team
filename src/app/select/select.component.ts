@@ -7,8 +7,10 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class SelectComponent implements OnInit {
   @Input() label: string =  "";
-  @Input() comida: string[] = [];
+  @Input() arrayInput: string[] = [];
   @Output() valSelected = new EventEmitter<string>();
+  @Input() opciones: Array<any> = [];
+
   constructor() {}
 
   ngOnInit(): void {}
