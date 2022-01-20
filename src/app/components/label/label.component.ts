@@ -8,14 +8,28 @@ import { LabelService } from 'src/app/components/label/label.service';
 })
 export class LabelComponent implements OnInit {
 
-  eti: Array<any>=[]  
+  eti: Array<any> = [];
+  selected: any;
+  tiposPagosArray: Array<any> = [];
   
-  constructor(private labelService : LabelService) { }
+  constructor(private labelService: LabelService) { }
 
   ngOnInit(): void {
-    
-    this.labelService.get().subscribe((etiqueta)=>{
-      this.eti = etiqueta.data.etiquetas
-      console.log(this.eti)})
+
+    this.labelService.get().subscribe((etiqueta) => {
+      this.eti = etiqueta.data.etiquetas;
+      
+    })
+
+    this.labelService.getMediosPago().subscribe((etiquet) => {
+      this.tiposPagosArray = etiquet.data.tipospagos
+      
+    })
+
   }
+
+  onValorSelected(valSelected: string){
+    this.selected = valSelected;
+  }
+
 }

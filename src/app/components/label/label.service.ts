@@ -12,14 +12,34 @@ export class LabelService {
 
   get(): Observable<any> {
 
-    return this.http.post('https://apoloniabackend.azurewebsites.net/api?query=%7B%0A%20%20etiquetas%20%7B%0A%20%20%20%20NOMBRE%0A%20%20%20%20DESCRIPCION%0A%20%20%20%20LABEL%0A%20%20%7D%0A%7D%0A', {
-      query: `{
-        etiquetas{
-         NOMBRE
-         DESCRIPCION
-         LABEL  
-        }
-       }`
-    }, { headers: new HttpHeaders().set("Content-Type", "aplication/json")})
+    let body = {
+      query: `query {
+      etiquetas{
+       NOMBRE
+      DESCRIPCION
+       LABEL  
+      }
+     }`};
+     
+     let headers = new HttpHeaders().set("Content-Type", "application/json");
+
+    return this.http.post('https://apoloniabackend.azurewebsites.net/api', body, { headers: headers});
+     
+  }
+
+  getMediosPago(): Observable<any> {
+
+    let body = {
+      query: `query {
+        tipospagos{ 
+                  id, 
+                  nombre
+                }   
+        }`};
+     
+     let headers = new HttpHeaders().set("Content-Type", "application/json");
+
+    return this.http.post('https://apoloniabackend.azurewebsites.net/api', body, { headers: headers});
+     
   }
 }

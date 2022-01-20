@@ -17,3 +17,11 @@
     </mat-card>
 
 </mat-card>
+<br>
+
+<mat-card *ngFor='let label2 of tiposPagosArray' class="ejemplo-carta">
+    
+    <app-select class="select" [label]="'Métodos de pago'" (valSelected)="onValorSelected($event)" [opciones]="['nombre']" [arrayInput]="tiposPagosArray">
+    </app-select>
+
+</mat-card>
